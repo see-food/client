@@ -65,6 +65,10 @@ export class SessionService {
     )
   }
 
+  confirm(id:string) {
+    return this.http.get(`${environment.BASE_URL}/api/confirm/${id}`, this.options)
+  }
+
   errorHandler(e) {
     console.log('SessionServiceError')
     console.log(e.message);

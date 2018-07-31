@@ -8,6 +8,7 @@ import { routes } from './routes';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/auth/login/login.component';
 import { SignupComponent } from './components/auth/signup/signup.component';
+import { ConfirmComponent } from './components/auth/confirm/confirm.component';
 
 import { SessionService } from './services/session.service'
 
@@ -15,7 +16,8 @@ import { SessionService } from './services/session.service'
   declarations: [
     AppComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    ConfirmComponent
   ],
   imports: [
     BrowserModule,
