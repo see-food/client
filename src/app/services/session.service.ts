@@ -10,7 +10,9 @@ interface UserObject{
   username: string
 }
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class SessionService {
   user: UserObject;
 

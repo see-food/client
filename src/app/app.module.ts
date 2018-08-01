@@ -9,15 +9,18 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './components/auth/login/login.component';
 import { SignupComponent } from './components/auth/signup/signup.component';
 import { ConfirmComponent } from './components/auth/confirm/confirm.component';
+import { HomeComponent } from './components/views/home/home.component'
 
-import { SessionService } from './services/session.service'
+import { SessionService } from './services/session.service';
+import { RecipesService } from './services/recipes.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     SignupComponent,
-    ConfirmComponent
+    ConfirmComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +28,10 @@ import { SessionService } from './services/session.service'
     FormsModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [SessionService],
+  providers: [
+    SessionService,
+    RecipesService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
