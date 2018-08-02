@@ -67,8 +67,13 @@ export class SessionService {
     )
   }
 
-  confirm(id:string) {
-    return this.http.get(`${environment.BASE_URL}/api/confirm/${id}`, this.options)
+  confirm(id: string) {
+    return this.http.get(`${environment.BASE_URL}/api/confirm/${id}`, this.options).pipe(
+      map((res: Response) => {
+        return res.json()
+      }),
+      catchError(e => of(this.errorHandler(e)))
+    )
   }
 
   errorHandler(e) {
