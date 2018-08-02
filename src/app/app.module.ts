@@ -10,9 +10,11 @@ import { LoginComponent } from './components/auth/login/login.component';
 import { SignupComponent } from './components/auth/signup/signup.component';
 import { ConfirmComponent } from './components/auth/confirm/confirm.component';
 import { HomeComponent } from './components/views/home/home.component'
-
+import { FileSelectDirective } from "ng2-file-upload";
 import { SessionService } from './services/session.service';
 import { RecipesService } from './services/recipes.service';
+import { PhotoUploadComponent } from './components/photo-upload/photo-upload.component';
+import { PhotoService } from './services/photo.service';
 
 @NgModule({
   declarations: [
@@ -20,17 +22,20 @@ import { RecipesService } from './services/recipes.service';
     LoginComponent,
     SignupComponent,
     ConfirmComponent,
-    HomeComponent
+    HomeComponent,
+    PhotoUploadComponent,
+    FileSelectDirective
   ],
   imports: [
     BrowserModule,
     HttpModule,
     FormsModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
   ],
   providers: [
     SessionService,
-    RecipesService
+    RecipesService,
+    PhotoService
   ],
   bootstrap: [AppComponent]
 })
