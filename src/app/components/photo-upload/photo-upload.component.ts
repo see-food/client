@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FileUploader } from "ng2-file-upload";
-import { PhotoService } from '../../services/photo.service';
 import { environment } from '../../../environments/environment';
 import { Router } from '@angular/router';
 
@@ -18,7 +17,7 @@ export class PhotoUploadComponent implements OnInit {
   
   feedback: String;
 
-  constructor(private photoService: PhotoService, private router: Router) { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
     this.uploader.onSuccessItem = (item, response) => {
@@ -30,11 +29,9 @@ export class PhotoUploadComponent implements OnInit {
     }
   }
 
-  submit(photo) {
-
+  submit() {
     this.uploader.uploadAll();
-    console.log(this.uploader);
-    this.uploader.onCompleteItem = () => this.router.navigate(['/login']);
+    this.uploader.onCompleteItem = () => this.router.navigate(['/home']);
   }
 
 }

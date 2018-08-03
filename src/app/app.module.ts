@@ -14,7 +14,6 @@ import { FileSelectDirective } from "ng2-file-upload";
 import { SessionService } from './services/session.service';
 import { RecipesService } from './services/recipes.service';
 import { PhotoUploadComponent } from './components/photo-upload/photo-upload.component';
-import { PhotoService } from './services/photo.service';
 
 @NgModule({
   declarations: [
@@ -34,8 +33,7 @@ import { PhotoService } from './services/photo.service';
   ],
   providers: [
     SessionService,
-    RecipesService,
-    PhotoService
+    RecipesService
   ],
   bootstrap: [AppComponent]
 })

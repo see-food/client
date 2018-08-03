@@ -1,7 +1,12 @@
 <form>
   <div>
-    <label for="photo">Upload Photo: </label>
-    <input type="file" name="photo" ng2FileSelect [uploader]="uploader">
+    <label for="file">Upload Photo from your device: </label>
+    <input type="file" name="file" ng2FileSelect [uploader]="uploader">
   </div>
-  <button type="submit" (click)="submit(newPhoto)">Submit</button>
+  <button type="submit" (click)="submit()">Submit</button>
+
+  <div id="camera">
+    <input type="file" capture="camera" accept="image/*" id="cameraInput" ng2FileSelect [uploader]="uploader" name="cameraInput">
+    <button type="button" (click)="submit()">Upload File</button>
+  </div>
 </form>
