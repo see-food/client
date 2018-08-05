@@ -1,0 +1,29 @@
+<nav>
+  <div>
+    <a [routerLink]="['home']"><img src="/assets/lobster-land.png" alt="lobster">
+    <h2>SeeFood</h2>
+    </a>
+  </div>
+  <ul>
+    <div *ngIf="!sessionService.user" class="li-container">
+      <li >
+        <a [routerLink]="['login']">Login</a>
+      </li>
+    </div>
+    <div *ngIf="!sessionService.user" class="li-container">
+      <li >
+        <a [routerLink]="['signup']">Signup</a>
+      </li>
+    </div>
+    <div *ngIf="sessionService.user" class="li-container">
+      <li >
+        <a [routerLink]="['Home']">Home</a>
+      </li>
+    </div>
+    <div *ngIf="sessionService.user"class="li-container">
+      <li>
+        <a href="#" (click)="logout()">Logout</a>
+      </li>
+    </div>
+  </ul>
+</nav>

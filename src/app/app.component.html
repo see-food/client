@@ -1,7 +1,5 @@
-<a [routerLink]="['login']">Login</a>
-<br />
-<a [routerLink]="['signup']">Signup</a>
-<br />
-<a href="#" (click)="logout()">Logout</a>
-
-<router-outlet></router-outlet>
+<navbar></navbar>
+<div id="router-container">
+  <router-outlet></router-outlet>
+</div>
+<tabbar></tabbar>
