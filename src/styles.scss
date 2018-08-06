@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
-@import '~@angular/material/theming';
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
 @import './scss/variables';
 @import './scss/fonts';
 
@@ -7,4 +8,19 @@ body{
   margin: 0;
   padding: 0;
   font-size: 18px;
+}
+
+.form-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  form{
+    display: inline-flex;
+    flex-direction: column;
+    h2{
+      font: $title-font;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+  }
 }

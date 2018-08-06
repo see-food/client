@@ -1,3 +1,4 @@
+@import '../../../../scss/variables';
 nav{
   margin: 0;
   padding: 0;
@@ -22,7 +23,7 @@ nav{
         height: 40px;
       }
       h2{
-        color: #D62D0F;
+        color: $red-font;
         font-family: 'Catamaran', sans-serif;
         font-weight: bold;
         font-size: 1rem;

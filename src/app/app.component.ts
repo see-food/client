@@ -10,8 +10,5 @@ export class AppComponent {
   title = 'app';
   
   constructor(private sessionService: SessionService){}
-
-  logout(){
-    this.sessionService.logout().subscribe();
-  }
+  
 }

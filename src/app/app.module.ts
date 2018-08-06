@@ -14,10 +14,10 @@ import { FileSelectDirective } from "ng2-file-upload";
 import { SessionService } from './services/session.service';
 import { RecipesService } from './services/recipes.service';
 import { PhotoUploadComponent } from './components/photo-upload/photo-upload.component';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './components/views/navbar/navbar.component';
 import { TabbarComponent } from './components/views/tabbar/tabbar.component';
-import {MatInputModule, MatIconModule} from '@angular/material';
+import { MatInputModule, MatIconModule, MatButtonModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -38,7 +38,8 @@ import {MatInputModule, MatIconModule} from '@angular/material';
     RouterModule.forRoot(routes),
     BrowserAnimationsModule,
     MatInputModule,
-    MatIconModule
+    MatIconModule,
+    MatButtonModule
   ],
   providers: [
     SessionService,
