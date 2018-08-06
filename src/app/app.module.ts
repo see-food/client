@@ -9,7 +9,7 @@ import { LoginComponent } from './components/auth/login/login.component';
 import { SignupComponent } from './components/auth/signup/signup.component';
 import { ConfirmComponent } from './components/auth/confirm/confirm.component';
 import { HomeComponent } from './components/views/home/home.component'
-import { FileSelectDirective } from "ng2-file-upload";
+import { FileUploadModule } from 'ng2-file-upload'
 import { SessionService } from './services/session.service';
 import { RecipesService } from './services/recipes.service';
 import { PhotoUploadComponent } from './components/photo-upload/photo-upload.component';
@@ -28,7 +28,6 @@ import { RecipeListComponent } from './components/views/recipe-list/recipe-list.
     ConfirmComponent,
     HomeComponent,
     PhotoUploadComponent,
-    FileSelectDirective,
     NavbarComponent,
     TabbarComponent,
     ProfilePageComponent,
@@ -42,7 +41,8 @@ import { RecipeListComponent } from './components/views/recipe-list/recipe-list.
     BrowserAnimationsModule,
     MatInputModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    FileUploadModule
   ],
   providers: [
     SessionService,
