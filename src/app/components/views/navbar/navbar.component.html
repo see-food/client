@@ -1,26 +1,32 @@
 <nav>
   <div>
-    <a [routerLink]="['home']"><img src="/assets/lobster-land.png" alt="lobster">
-    <h2>SeeFood</h2>
+    <a [routerLink]="['home']">
+      <img src="/assets/lobster-land.png" alt="lobster">
+      <h2>SeeFood</h2>
     </a>
   </div>
   <ul>
     <div *ngIf="!sessionService.user" class="li-container">
-      <li >
+      <li>
         <a [routerLink]="['login']">Login</a>
       </li>
     </div>
     <div *ngIf="!sessionService.user" class="li-container">
-      <li >
+      <li>
         <a [routerLink]="['signup']">Signup</a>
       </li>
     </div>
     <div *ngIf="sessionService.user" class="li-container">
-      <li >
-        <a [routerLink]="['Home']">Home</a>
+      <li>
+        <a [routerLink]="['home']">Home</a>
       </li>
     </div>
-    <div *ngIf="sessionService.user"class="li-container">
+    <div *ngIf="sessionService.user" class="li-container">
+      <li>
+        <a [routerLink]="['profile']">Profile</a>
+      </li>
+    </div>
+    <div *ngIf="sessionService.user" class="li-container">
       <li>
         <a href="#" (click)="logout()">Logout</a>
       </li>
