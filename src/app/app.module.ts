@@ -16,7 +16,7 @@ import { PhotoUploadComponent } from './components/photo-upload/photo-upload.com
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './components/views/navbar/navbar.component';
 import { TabbarComponent } from './components/views/tabbar/tabbar.component';
-import { MatInputModule, MatIconModule, MatButtonModule } from '@angular/material';
+import { MatInputModule, MatIconModule, MatButtonModule, MatMenuModule, MatStepperModule } from '@angular/material';
 import { ProfilePageComponent } from './components/views/profile-page/profile-page.component';
 import { RecipeListComponent } from './components/views/recipe-list/recipe-list.component';
 
@@ -42,6 +42,8 @@ import { RecipeListComponent } from './components/views/recipe-list/recipe-list.
     MatInputModule,
     MatIconModule,
     MatButtonModule,
+    MatMenuModule,
+    MatStepperModule,
     FileUploadModule
   ],
   providers: [

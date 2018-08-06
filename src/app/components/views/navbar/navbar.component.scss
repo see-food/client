@@ -3,12 +3,12 @@ nav{
   margin: 0;
   padding: 0;
   display:flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  height: 40px;
+  height: 10vh;
   width: 100%;
-  background-color: #F7FFF7;
-  div{
+  border-bottom: 5px solid $red-font;
+  .logo-container{
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -20,7 +20,7 @@ nav{
       align-items: center;
       text-decoration: none;
       img{
-        height: 40px;
+        height: 8vh;
       }
       h2{
         color: $red-font;
@@ -29,46 +29,5 @@ nav{
         font-size: 1rem;
       }
     }
-  }
-  ul{
-    width: 20%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    list-style: none;
-    .li-container{
-      height: 40px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      li{
-        display:block;
-        text-align: center;
-        a{
-          font-family: 'Arimo', sans-serif;
-          font-size: 0.8rem;
-          text-decoration: none;
-          font-weight: bold;
-          color: #D62D0F;
-        }
-      }
-    }
-    .li-container:hover{
-      background-color: #A72312;
-      li{
-        a{
-          color:#F7FFF7
-        }
-      }
-      
-    }
-  }
-}
-
-@media (max-width: 767px) {
-  nav {
-      ul{
-          display: none;
-      }
   }
 }
