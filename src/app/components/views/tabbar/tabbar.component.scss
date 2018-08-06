@@ -26,11 +26,8 @@
       .is-active {
         text-decoration: none;
         div {
-          i {
-            color: green;
-          }
-          a {
-            color: green;
+          *{
+            color: blue;
           }
         }
       }
