@@ -1,7 +1,28 @@
 <footer>
-    <ul id="tab-bar">
-      <li><img src="/assets/home.png" alt="home"></li>
-      <li><img src="/assets/camera.png" alt="camera"></li>
-      <li><img src="/assets/user.png" alt="user"></li>
-    </ul>
+  <ul id="tab-bar">
+    <li>
+      <a [routerLink]="['home']" [routerLinkActive]="['is-active']">
+        <div>
+          <i class="material-icons md-48">home</i>
+          <span>Home</span>
+        </div>
+      </a>
+    </li>
+    <li>
+      <a [routerLink]="['home']" [routerLinkActive]="['is-active']">
+        <div>
+          <i class="material-icons md-48">camera_alt</i>
+          <span>Pictures</span>
+        </div>
+      </a>
+    </li>
+    <li>
+      <a [routerLink]="['logout']" [routerLinkActive]="['is-active']">
+        <div>
+          <i class="material-icons md-48">face</i>
+          <span>Profile</span>
+        </div>
+      </a>
+    </li>
+  </ul>
 </footer>

@@ -13,5 +13,27 @@
     justify-content: space-between;
     align-items: center;
     list-style: none;
+    li {
+      a {
+        text-decoration: none;
+        div {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+      .is-active {
+        text-decoration: none;
+        div {
+          i {
+            color: green;
+          }
+          a {
+            color: green;
+          }
+        }
+      }
+    }
   }
 }
