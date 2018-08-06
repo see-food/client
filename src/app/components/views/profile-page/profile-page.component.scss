@@ -1,0 +1,24 @@
+@import '../../../../scss/variables';
+@import '../../../../scss/fonts';
+.container{
+  width: 80%;
+  height: 90vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  div{
+    label{
+      font: $title-font;
+      color: $red-font;
+    }
+    h2{
+      font: $text-font;
+      
+    }
+  }
+  #my-recipes{
+    height: 50%;
+  }
+}
