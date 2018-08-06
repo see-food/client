@@ -28,18 +28,16 @@ export class SessionService {
   signup(username: string, email: string, password: string): Observable<object> {
     return this.http.post(`${environment.BASE_URL}/api/signup`, {username, email, password}, this.options).pipe(
       map( (res:Response) => {
-        let data = res.json();
-        this.user = data.user;
-        return this.user;
+        return res.json()
       }),
-      catchError( e => of(this.errorHandler(e)))
+      catchError( e => of(this.errorHandler(e)) )
     )
   }
 
   login(username: string, password: string): Observable<object> {
     return this.http.post(`${environment.BASE_URL}/api/login`, {username, password}, this.options).pipe(
       map( (res:Response) => {
-        let user = res.json();
+        let user = res.json()
         this.user = user;
         return this.user;
       }),
