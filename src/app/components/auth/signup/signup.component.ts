@@ -8,13 +8,17 @@ import { Router } from '@angular/router'
   styleUrls: ['./signup.component.scss']
 })
 export class SignupComponent {
+  message: String
 
   constructor(private sessionService: SessionService, private router: Router) { }
 
   signup(username: string, email: string, password: string) {
-    console.log('signup');
-    this.sessionService.signup(username, email, password).subscribe( (user: any) => {
-      this.router.navigate(['/']);
+    this.sessionService.signup(username, email, password).subscribe( (res: any) => {
+      if (res._id) {
+        this.router.navigate(['/']);
+      } else {
+        this.message = JSON.parse(res._body).message
+      }
     });
   }
 }

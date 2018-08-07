@@ -1,0 +1,102 @@
+@import '../../../../scss/variables';
+@import '../../../../scss/fonts';
+.container{
+  position: relative;
+  margin: 0 auto;
+  height: 88vh;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .photo{
+    display:flex;
+    justify-content: space-around;
+    align-items: baseline;
+    .img{
+      height: 60%;
+      img{
+        max-height: 90%;
+        max-width: 90%;
+        object-fit: contain;
+      }
+      h3{
+        margin: 0;
+        font: $title-font;
+        color: $red-font;
+        font-weight: bold;
+      }
+    }
+  }
+  .info{
+    height: 60%;
+    h3{
+      font: $title-font;
+      margin: 0;
+      font-weight: bold;
+    }
+    mat-list{
+      height: 90%;
+      overflow: auto;
+      mat-list-item{
+        h4{
+          margin:0;
+          font: $text-font;
+        }
+      }
+    }
+  }
+}
+
+@media(max-width: 767px){
+  .container{
+    position: relative;
+    margin: 0 auto;
+    height: 75vh;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .photo{
+      display:flex;
+      flex-direction: column;
+      align-items: flex-start;
+      height: 100%;
+      .img{
+        max-height: 50%;
+        img{
+          max-height: 90%;
+          max-width: 90%;
+          object-fit: contain;
+        }
+        h3{
+          margin: 0;
+          font: $title-font;
+          color: $red-font;
+          font-weight: bold;
+        }
+      }
+      .info{
+        max-height: 45%;
+        h3{
+          font: $title-font;
+          margin: 0;
+          font-weight: bold;
+        }
+        mat-list{
+          height: 90%;
+          overflow: auto;
+          mat-list-item{
+            h4{
+              margin:0;
+              font: $text-font;
+            }
+          }
+        }
+      }
+    }
+
+    
+  }
+}

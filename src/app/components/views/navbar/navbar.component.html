@@ -1,35 +1,28 @@
 <nav>
-  <div>
+  <div class="logo-container">
     <a [routerLink]="['home']">
-      <img src="/assets/lobster-land.png" alt="lobster">
-      <h2>SeeFood</h2>
+      <img src="/assets/lobster-icon.png" alt="lobster">
+      <h2>seefood</h2>
     </a>
   </div>
+
   <ul>
-    <div *ngIf="!sessionService.user" class="li-container">
-      <li>
-        <a [routerLink]="['login']">Login</a>
-      </li>
-    </div>
-    <div *ngIf="!sessionService.user" class="li-container">
-      <li>
-        <a [routerLink]="['signup']">Signup</a>
-      </li>
-    </div>
-    <div *ngIf="sessionService.user" class="li-container">
-      <li>
-        <a [routerLink]="['home']">Home</a>
-      </li>
-    </div>
-    <div *ngIf="sessionService.user" class="li-container">
-      <li>
-        <a [routerLink]="['profile']">Profile</a>
-      </li>
-    </div>
-    <div *ngIf="sessionService.user" class="li-container">
-      <li>
-        <a href="#" (click)="logout()">Logout</a>
-      </li>
-    </div>
+    <li><a *ngIf="!sessionService.user" mat-menu-item [routerLink]="['/login']">Login</a></li>
+    <li><a *ngIf="!sessionService.user" mat-menu-item [routerLink]="['/signup']">SignUp</a></li>
+    <li><a *ngIf="sessionService.user" mat-menu-item [routerLink]="['/home']">Home</a></li>
+    <li><a *ngIf="sessionService.user" mat-menu-item [routerLink]="['/profile']">Profile</a></li>
+    <li><a *ngIf="sessionService.user" mat-menu-item [routerLink]="['/newPhoto']">Photos</a></li>
+    <li><a *ngIf="sessionService.user" mat-menu-item (click)="logout()">Logout</a></li>
   </ul>
+  <div class="menu-container">
+    <button mat-stroked-button [matMenuTriggerFor]="menu">Menu</button>
+    <mat-menu #menu="matMenu">
+      <a *ngIf="!sessionService.user" mat-menu-item [routerLink]="['/login']">Login</a>
+      <a *ngIf="!sessionService.user" mat-menu-item [routerLink]="['/signup']">SignUp</a>
+      <a *ngIf="sessionService.user" mat-menu-item [routerLink]="['/home']">Home</a>
+      <a *ngIf="sessionService.user" mat-menu-item [routerLink]="['/profile']">Profile</a>
+      <a *ngIf="sessionService.user" mat-menu-item [routerLink]="['/newPhoto']">Photos</a>
+      <a *ngIf="sessionService.user" mat-menu-item (click)="logout()">Logout</a>
+    </mat-menu>
+  </div>
 </nav>

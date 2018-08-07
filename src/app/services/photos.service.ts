@@ -11,10 +11,15 @@ import { of } from 'rxjs';
 })
 export class PhotosService {
 
+  options: object = {
+    withCredentials: true,
+    handleError: true
+  }
+
   constructor(private http: Http) { }
   //Function that returns all photos uploaded by user
   getPhotosByUser() {
-    return this.http.get(`${environment.BASE_URL}/api/private/pics`).pipe(
+    return this.http.get(`${environment.BASE_URL}/api/private/pics`, this.options).pipe(
       map((res: Response) => {
         return res.json()
       }),
@@ -24,7 +29,7 @@ export class PhotosService {
 
   //Function that returns all details of a photo included its recipes
   getPhotoById(id) {
-    return this.http.get(`${environment.BASE_URL}/api/pics/${id}`).pipe(
+    return this.http.get(`${environment.BASE_URL}/api/pics/${id}`, this.options).pipe(
       map((res: Response) => {
         return res.json()
       }),

@@ -10,21 +10,15 @@ import { of } from 'rxjs';
   providedIn: 'root'
 })
 export class RecipesService {
+  options: object = {
+    withCredentials: true,
+    handleError: true
+  }
 
   constructor(private http: Http) { }
-  // newRecipe(recipe) {
-  //   // let { title, category, cuisine, instructions, ingredients } = recipe
-  //   return this.http.post(`${environment.BASE_URL}/api/recipes`, recipe).pipe(
-  //     map((res: Response) => {
-  //       return res.json()
-  //     }),
-  //     catchError(e => of(this.errorHandler(e)))
-  //   )
-  // }
-
   //Function that returns all recipes in database
   getRecipes() {
-    return this.http.get(`${environment.BASE_URL}/api/recipes`).pipe(
+    return this.http.get(`${environment.BASE_URL}/api/recipes`, this.options).pipe(
       map((res: Response) => {
         return res.json()
       }),
@@ -34,7 +28,7 @@ export class RecipesService {
 
   //Method that returns all of current user starred recipes
   getRecipesByUser() {
-    return this.http.get(`${environment.BASE_URL}/api/private/recipes`).pipe(
+    return this.http.get(`${environment.BASE_URL}/api/private/recipes`, this.options).pipe(
       map((res: Response) => {
         return res.json()
       }),
@@ -44,7 +38,7 @@ export class RecipesService {
 
   //Method that return a single recipe by id
   getRecipeById(id) {
-    return this.http.get(`${environment.BASE_URL}/api/recipes/${id}`).pipe(
+    return this.http.get(`${environment.BASE_URL}/api/recipes/${id}`, this.options).pipe(
       map((res: Response) => {
         return res.json()
       }),
@@ -54,8 +48,20 @@ export class RecipesService {
 
   //Method that favs a single recipe for current user
   starRecipe(id) {
-    return this.http.get(`${environment.BASE_URL}/api/recipes/fav/${id}`).pipe(
+    return this.http.get(`${environment.BASE_URL}/api/recipes/fav/${id}`, this.options).pipe(
       map((res: Response) => {
+        return res.json()
+      }),
+      catchError(e => of(this.errorHandler(e)))
+    )
+  }
+
+
+  isStarred(id) {
+    return this.http.get(`${environment.BASE_URL}/api/recipes/isfav/${id}`, this.options).pipe(
+      map(( res: Response ) => {
+        console.log(res)
+        //CAMBIAR A BOOLEAN
         return res.json()
       }),
       catchError(e => of(this.errorHandler(e)))

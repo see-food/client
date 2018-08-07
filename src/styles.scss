@@ -28,3 +28,16 @@ body{
 a:visited{
   color: black;
 }
+
+.mat-step-header .mat-step-icon{
+  background-color: $red-font;
+  span{
+    height: 16px;
+  }
+}
+
+.mat-vertical-stepper-header .mat-step-icon-not-touched {
+  span{
+    height: 16px;
+  }
+}

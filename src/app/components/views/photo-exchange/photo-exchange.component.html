@@ -1,0 +1,17 @@
+<div class="container" *ngIf="photo">
+  <div class="photo">
+    <div class="img">
+      <h3>This is your photo</h3>
+      <img src="{{photo.path}}" alt="food">
+    </div>
+    <div class="info">
+      <h3>And this is what we found about it!</h3>
+      <mat-list>
+        <mat-list-item *ngFor="let ingredient of photo.clarifaiInfo">
+          <h4>{{ingredient.name}}</h4>
+        </mat-list-item>
+      </mat-list>
+    </div>
+  </div>
+  <a mat-flat-button color="warn" [routerLink]="['/photo/'+photo._id]">Check some recipes</a>
+</div>

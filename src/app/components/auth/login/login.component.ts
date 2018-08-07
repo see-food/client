@@ -8,11 +8,17 @@ import { Router } from '@angular/router'
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
+  message: String
 
   constructor(private sessionService: SessionService, private router: Router) { }
 
   login(username:string, password:string){
-    console.log('login');
-    this.sessionService.login(username, password).subscribe( (user: any) => this.router.navigate(['/']))
+    this.sessionService.login(username, password).subscribe( (res: any) => {
+      if (res._id) {
+        this.router.navigate(['/'])
+      } else {
+        this.message = JSON.parse(res._body).message
+      }
+    })
   }
 }

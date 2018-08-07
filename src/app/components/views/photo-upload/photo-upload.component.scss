@@ -1,8 +1,39 @@
-form{
+@import '../../../../scss/variables';
+@import '../../../../scss/fonts';
+
+
+.banner-container{
+  width: 100%;
+  height: 40vh;
+  position: relative;
+  margin: 0 auto;
+  img{
+    width: 100vw;
+    max-height: 100%;
+    object-fit: cover;
+    object-position: 50% 40%;
+  }
+}
+
+.container{
+  position: relative;
+  margin: 2.5vh auto;
+  width: 80%;
+  height: 44vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  
+  form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    *{
+      margin: 1vh 0;
+    }
+}
 }
 
 #camera{
@@ -15,20 +46,20 @@ form{
 .custom-file-input::before {
   content: 'Select an image';
   display: inline-block;
-  background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
-  border: 1px solid #999;
-  border-radius: 3px;
+  border: 1px solid $red-font;
   padding: 5px 8px;
   outline: none;
+  color: $red-font;
   white-space: nowrap;
   -webkit-user-select: none;
   cursor: pointer;
   text-shadow: 1px 1px #fff;
-  font-weight: 700;
+  font: text-font;
   font-size: 10pt;
 }
 .custom-file-input:hover::before {
-  border-color: black;
+  border-color: $red-font;
+  background-color:$hover-red-background;
 }
 .custom-file-input:active::before {
   background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
@@ -38,22 +69,21 @@ form{
   visibility: hidden;
 }
 #cameraInput::before {
-  content: 'Take a Picture';
+  content: 'Take a photo';
   display: inline-block;
-  background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
-  border: 1px solid #999;
-  border-radius: 3px;
+  border: 1px solid $red-font;
   padding: 5px 8px;
   outline: none;
+  color: $red-font;
   white-space: nowrap;
   -webkit-user-select: none;
   cursor: pointer;
   text-shadow: 1px 1px #fff;
-  font-weight: 700;
+  font: text-font;
   font-size: 10pt;
 }
 #cameraInput:hover::before {
-  border-color: black;
+  border-color: $red-font;
 }
 #cameraInput:active::before {
   background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);

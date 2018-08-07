@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FileUploader } from "ng2-file-upload";
-import { environment } from '../../../environments/environment';
+import { environment } from '../../../../environments/environment';
 import { Router } from '@angular/router';
 
 @Component({
@@ -31,7 +31,9 @@ export class PhotoUploadComponent implements OnInit {
 
   submit() {
     this.uploader.uploadAll();
-    this.uploader.onCompleteItem = () => this.router.navigate(['/home']);
+    this.uploader.onCompleteItem = (item, response) => {
+      this.router.navigate([`/photo/wait/${JSON.parse(response).photo._id}`])
+    };
   }
 
 }

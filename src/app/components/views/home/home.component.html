@@ -2,14 +2,40 @@
   <div class="img-container">
     <img src="/assets/logo.png" alt="seefood - Find out what is that delicious meal">
   </div>
-  <div class="text-container">
-    <p>To user our app, follow this steps:</p>
-    <ul>
-      <li>Upload or take a picture with your device.</li>
-      <li>Wait a little bit</li>
-      <li>????</li>
-      <li>Check your related recipes and select your favourite ones.</li>
-    </ul>
-  </div>
-  <app-photo-upload></app-photo-upload>
+  <mat-vertical-stepper [linear]="!isLinear" #stepper>
+    <mat-step [stepControl]="firstFormGroup">
+      <ng-template matStepLabel>
+        <a [routerLink]="['/photo']">Upload</a> or
+        <a [routerLink]="['/photo']">take a picture</a> with your device.</ng-template>
+      <div>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </mat-step>
+    <mat-step [stepControl]="secondFormGroup">
+
+      <ng-template matStepLabel>Wait a littel bit</ng-template>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+
+    </mat-step>
+    <mat-step [stepControl]="thirdFormGroup">
+
+      <ng-template matStepLabel>????</ng-template>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+
+    </mat-step>
+    <mat-step [stepControl]="fourthFormGroup">
+      <ng-template matStepLabel>Profit</ng-template>
+      Check your related recipes and select your favourite ones
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button (click)="stepper.reset()">Reset</button>
+      </div>
+    </mat-step>
+  </mat-vertical-stepper>
 </div>

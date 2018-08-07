@@ -12,13 +12,19 @@ import { HomeComponent } from './components/views/home/home.component'
 import { FileUploadModule } from 'ng2-file-upload'
 import { SessionService } from './services/session.service';
 import { RecipesService } from './services/recipes.service';
-import { PhotoUploadComponent } from './components/photo-upload/photo-upload.component';
+import { PhotoUploadComponent } from './components/views/photo-upload/photo-upload.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './components/views/navbar/navbar.component';
 import { TabbarComponent } from './components/views/tabbar/tabbar.component';
-import { MatInputModule, MatIconModule, MatButtonModule } from '@angular/material';
+import { MatInputModule, MatIconModule, MatButtonModule, MatMenuModule, MatStepperModule, MatCardModule, MatListModule } from '@angular/material';
 import { ProfilePageComponent } from './components/views/profile-page/profile-page.component';
 import { RecipeListComponent } from './components/views/recipe-list/recipe-list.component';
+import { PhotoExchangeComponent } from './components/views/photo-exchange/photo-exchange.component';
+import { PhotoListComponent } from './components/views/photo-list/photo-list.component';
+import { RecipeComponent } from './components/views/recipe/recipe.component';
+import { RecipeCardComponent } from './components/views/recipe-card/recipe-card.component';
+import { PhotoCardComponent } from './components/views/photo-card/photo-card.component';
+import { PhotoComponent } from './components/views/photo/photo.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +37,13 @@ import { RecipeListComponent } from './components/views/recipe-list/recipe-list.
     NavbarComponent,
     TabbarComponent,
     ProfilePageComponent,
-    RecipeListComponent
+    RecipeListComponent,
+    PhotoExchangeComponent,
+    PhotoListComponent,
+    RecipeComponent,
+    RecipeCardComponent,
+    PhotoCardComponent,
+    PhotoComponent
   ],
   imports: [
     BrowserModule,
@@ -42,6 +54,10 @@ import { RecipeListComponent } from './components/views/recipe-list/recipe-list.
     MatInputModule,
     MatIconModule,
     MatButtonModule,
+    MatMenuModule,
+    MatStepperModule,
+    MatListModule,
+    MatCardModule,
     FileUploadModule
   ],
   providers: [
