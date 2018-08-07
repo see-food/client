@@ -19,6 +19,9 @@ import { TabbarComponent } from './components/views/tabbar/tabbar.component';
 import { MatInputModule, MatIconModule, MatButtonModule, MatMenuModule, MatStepperModule } from '@angular/material';
 import { ProfilePageComponent } from './components/views/profile-page/profile-page.component';
 import { RecipeListComponent } from './components/views/recipe-list/recipe-list.component';
+import { PhotoListComponent } from './components/views/photo-list/photo-list.component';
+import { CardComponent } from './components/views/card/card.component';
+import { RecipeComponent } from './components/views/recipe/recipe.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +34,10 @@ import { RecipeListComponent } from './components/views/recipe-list/recipe-list.
     NavbarComponent,
     TabbarComponent,
     ProfilePageComponent,
-    RecipeListComponent
+    RecipeListComponent,
+    PhotoListComponent,
+    CardComponent,
+    RecipeComponent
   ],
   imports: [
     BrowserModule,

@@ -5,6 +5,7 @@ import { ConfirmComponent } from './components/auth/confirm/confirm.component'
 import { HomeComponent } from './components/views/home/home.component'
 import { ProfilePageComponent } from "./components/views/profile-page/profile-page.component";
 import { PhotoUploadComponent } from "./components/photo-upload/photo-upload.component";
+import { RecipeListComponent } from './components/views/recipe-list/recipe-list.component'
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -13,5 +14,6 @@ export const routes: Routes = [
   { path: 'signup',  component: SignupComponent },
   { path: 'confirm/:id',  component: ConfirmComponent },
   { path: 'profile', component: ProfilePageComponent},
+  { path: 'profile/recipes', component: RecipeListComponent },
   { path: 'photo', component: PhotoUploadComponent}
 ]
