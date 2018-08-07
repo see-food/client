@@ -12,13 +12,14 @@ import { HomeComponent } from './components/views/home/home.component'
 import { FileUploadModule } from 'ng2-file-upload'
 import { SessionService } from './services/session.service';
 import { RecipesService } from './services/recipes.service';
-import { PhotoUploadComponent } from './components/photo-upload/photo-upload.component';
+import { PhotoUploadComponent } from './components/views/photo-upload/photo-upload.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './components/views/navbar/navbar.component';
 import { TabbarComponent } from './components/views/tabbar/tabbar.component';
 import { MatInputModule, MatIconModule, MatButtonModule, MatMenuModule, MatStepperModule } from '@angular/material';
 import { ProfilePageComponent } from './components/views/profile-page/profile-page.component';
 import { RecipeListComponent } from './components/views/recipe-list/recipe-list.component';
+import { PhotoExchangeComponent } from './components/views/photo-exchange/photo-exchange.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { RecipeListComponent } from './components/views/recipe-list/recipe-list.
     NavbarComponent,
     TabbarComponent,
     ProfilePageComponent,
-    RecipeListComponent
+    RecipeListComponent,
+    PhotoExchangeComponent
   ],
   imports: [
     BrowserModule,

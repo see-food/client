@@ -4,7 +4,8 @@ import { SignupComponent } from './components/auth/signup/signup.component'
 import { ConfirmComponent } from './components/auth/confirm/confirm.component'
 import { HomeComponent } from './components/views/home/home.component'
 import { ProfilePageComponent } from "./components/views/profile-page/profile-page.component";
-import { PhotoUploadComponent } from "./components/photo-upload/photo-upload.component";
+import { PhotoUploadComponent } from "./components/views/photo-upload/photo-upload.component";
+import { PhotoExchangeComponent } from "./components/views/photo-exchange/photo-exchange.component";
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -13,5 +14,6 @@ export const routes: Routes = [
   { path: 'signup',  component: SignupComponent },
   { path: 'confirm/:id',  component: ConfirmComponent },
   { path: 'profile', component: ProfilePageComponent},
-  { path: 'photo', component: PhotoUploadComponent}
+  { path: 'photo', component: PhotoUploadComponent},
+  { path: 'photo/wait/:id', component: PhotoExchangeComponent}
 ]
