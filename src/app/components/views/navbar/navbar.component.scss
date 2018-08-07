@@ -1,33 +1,67 @@
 @import '../../../../scss/variables';
-nav{
+@import '../../../../scss/fonts';
+nav {
   margin: 0;
   padding: 0;
-  display:flex;
+  display: flex;
   justify-content: space-around;
   align-items: center;
   height: 10vh;
   width: 100%;
   border-bottom: 5px solid $red-font;
-  .logo-container{
+  .logo-container {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     max-height: 100%;
     width: 40%;
-    a{
+    a {
       display: flex;
       justify-content: flex-start;
       align-items: center;
       text-decoration: none;
-      img{
+      img {
         height: 8vh;
       }
-      h2{
+      h2 {
         color: $red-font;
         font-family: 'Catamaran', sans-serif;
         font-weight: bold;
         font-size: 1rem;
       }
+    }
+  }
+  .menu-container {
+    display: none;
+  }
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font: $text-font;
+        font-weight: bold;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+@media (max-width:767px) {
+  nav {
+    .menu-container {
+      display: block;
+    }
+    ul {
+      display: none;
     }
   }
 }
