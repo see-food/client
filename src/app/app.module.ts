@@ -24,6 +24,7 @@ import { PhotoListComponent } from './components/views/photo-list/photo-list.com
 import { RecipeComponent } from './components/views/recipe/recipe.component';
 import { RecipeCardComponent } from './components/views/recipe-card/recipe-card.component';
 import { PhotoCardComponent } from './components/views/photo-card/photo-card.component';
+import { PhotoComponent } from './components/views/photo/photo.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { PhotoCardComponent } from './components/views/photo-card/photo-card.com
     PhotoListComponent,
     RecipeComponent,
     RecipeCardComponent,
-    PhotoCardComponent
+    PhotoCardComponent,
+    PhotoComponent
   ],
   imports: [
     BrowserModule,

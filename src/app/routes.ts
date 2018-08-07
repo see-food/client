@@ -8,6 +8,7 @@ import { PhotoUploadComponent } from "./components/views/photo-upload/photo-uplo
 import { PhotoExchangeComponent } from "./components/views/photo-exchange/photo-exchange.component";
 import { RecipeListComponent } from './components/views/recipe-list/recipe-list.component'
 import { RecipeComponent } from './components/views/recipe/recipe.component'
+import { PhotoComponent } from "./components/views/photo/photo.component";
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -18,6 +19,7 @@ export const routes: Routes = [
   { path: 'profile', component: ProfilePageComponent},
   { path: 'newPhoto', component: PhotoUploadComponent},
   { path: 'photo/wait/:id', component: PhotoExchangeComponent},
+  { path: 'photo/:id', component: PhotoComponent},
   { path: 'profile/recipes', component: RecipeListComponent },
   { path: 'recipe/:id', component: RecipeComponent }
 ]

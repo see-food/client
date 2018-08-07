@@ -1,0 +1,6 @@
+<div class="container" *ngIf="photo">
+    <img src="{{photo.path}}" alt="photo">
+    <div *ngFor="let recipe of photo.recipes">
+      <app-recipe-card [recipe]="recipe"></app-recipe-card>
+    </div>
+  </div>
