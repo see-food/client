@@ -6,6 +6,7 @@ import { HomeComponent } from './components/views/home/home.component'
 import { ProfilePageComponent } from "./components/views/profile-page/profile-page.component";
 import { PhotoUploadComponent } from "./components/views/photo-upload/photo-upload.component";
 import { PhotoExchangeComponent } from "./components/views/photo-exchange/photo-exchange.component";
+import { RecipeListComponent } from './components/views/recipe-list/recipe-list.component'
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -15,5 +16,6 @@ export const routes: Routes = [
   { path: 'confirm/:id',  component: ConfirmComponent },
   { path: 'profile', component: ProfilePageComponent},
   { path: 'photo', component: PhotoUploadComponent},
-  { path: 'photo/wait/:id', component: PhotoExchangeComponent}
+  { path: 'photo/wait/:id', component: PhotoExchangeComponent},
+  { path: 'profile/recipes', component: RecipeListComponent },
 ]

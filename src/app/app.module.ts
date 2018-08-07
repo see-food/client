@@ -20,6 +20,9 @@ import { MatInputModule, MatIconModule, MatButtonModule, MatMenuModule, MatStepp
 import { ProfilePageComponent } from './components/views/profile-page/profile-page.component';
 import { RecipeListComponent } from './components/views/recipe-list/recipe-list.component';
 import { PhotoExchangeComponent } from './components/views/photo-exchange/photo-exchange.component';
+import { PhotoListComponent } from './components/views/photo-list/photo-list.component';
+import { CardComponent } from './components/views/card/card.component';
+import { RecipeComponent } from './components/views/recipe/recipe.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +36,10 @@ import { PhotoExchangeComponent } from './components/views/photo-exchange/photo-
     TabbarComponent,
     ProfilePageComponent,
     RecipeListComponent,
-    PhotoExchangeComponent
+    PhotoExchangeComponent,
+    PhotoListComponent,
+    CardComponent,
+    RecipeComponent
   ],
   imports: [
     BrowserModule,
