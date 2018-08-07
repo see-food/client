@@ -13,34 +13,27 @@
     object-fit: cover;
     object-position: 50% 40%;
   }
+}
 
 .container{
   position: relative;
-  margin: 5vh auto;
+  margin: 2.5vh auto;
   width: 80%;
-  height: 80vh;
+  max-height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  }
+  
   form{
-    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     *{
-      margin: 5vh 0;
+      margin: 1vh 0;
     }
-
-    #file-input{
-      margin-top: 10vh;
-    }
-  }
 }
-
-form{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 #camera{
@@ -76,7 +69,7 @@ form{
   visibility: hidden;
 }
 #cameraInput::before {
-  content: 'Take a Picture';
+  content: 'Take a photo';
   display: inline-block;
   border: 1px solid $red-font;
   padding: 5px 8px;

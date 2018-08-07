@@ -1,6 +1,6 @@
 <footer>
   <ul id="tab-bar">
-    <li>
+    <li *ngIf="sessionService.user">
       <a [routerLink]="['home']" [routerLinkActive]="['is-active']">
         <div>
           <i class="material-icons md-48">home</i>
@@ -8,19 +8,35 @@
         </div>
       </a>
     </li>
-    <li>
+    <li *ngIf="sessionService.user">
       <a [routerLink]="['photo']" [routerLinkActive]="['is-active']">
         <div>
           <i class="material-icons md-48">camera_alt</i>
-          <span>Pictures</span>
+          <span>Photos</span>
         </div>
       </a>
     </li>
-    <li>
+    <li *ngIf="sessionService.user">
       <a [routerLink]="['profile']" [routerLinkActive]="['is-active']">
         <div>
           <i class="material-icons md-48">face</i>
           <span>Profile</span>
+        </div>
+      </a>
+    </li>
+    <li *ngIf="!sessionService.user">
+      <a [routerLink]="['signup']" [routerLinkActive]="['is-active']">
+        <div>
+          <i class="material-icons md-48">create</i>
+          <span>Signup</span>
+        </div>
+      </a>
+    </li>
+    <li *ngIf="!sessionService.user">
+      <a [routerLink]="['login']" [routerLinkActive]="['is-active']">
+        <div>
+          <i class="material-icons md-48">exit_to_app</i>
+          <span>Login</span>
         </div>
       </a>
     </li>
