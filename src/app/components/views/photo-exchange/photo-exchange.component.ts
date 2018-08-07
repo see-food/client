@@ -15,8 +15,8 @@ export class PhotoExchangeComponent implements OnInit {
 
   ngOnInit() {
     this.route.params.subscribe(params => this.photoId = params['id'])
-    this.photoService.getPhotoById(this.photoId).subscribe(photo=>this.photo = photo)
-    console.log(this.photo);
+    this.photoService.getPhotoById(this.photoId).subscribe(photo=> {
+      this.photo = photo
+    })
   }
-
 }

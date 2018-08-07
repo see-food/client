@@ -56,6 +56,11 @@ export class RecipesService {
     )
   }
 
+
+  isStarred(id) {
+
+  }
+
   //Error handler method
   errorHandler(e) {
     console.log('RecipesServiceError')
