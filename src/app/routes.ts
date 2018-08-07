@@ -15,7 +15,7 @@ export const routes: Routes = [
   { path: 'signup',  component: SignupComponent },
   { path: 'confirm/:id',  component: ConfirmComponent },
   { path: 'profile', component: ProfilePageComponent},
-  { path: 'photo', component: PhotoUploadComponent},
+  { path: 'newPhoto', component: PhotoUploadComponent},
   { path: 'photo/wait/:id', component: PhotoExchangeComponent},
   { path: 'profile/recipes', component: RecipeListComponent },
 ]
