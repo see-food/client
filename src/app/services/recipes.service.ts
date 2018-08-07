@@ -58,7 +58,14 @@ export class RecipesService {
 
 
   isStarred(id) {
-
+    return this.http.get(`${environment.BASE_URL}/api/recipes/isfav/${id}`, this.options).pipe(
+      map(( res: Response ) => {
+        console.log(res)
+        //CAMBIAR A BOOLEAN
+        return res.json()
+      }),
+      catchError(e => of(this.errorHandler(e)))
+    )
   }
 
   //Error handler method

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core'
-import { SessionService } from '../../../services/session.service'
 import { RecipesService } from '../../../services/recipes.service'
 
 @Component({
@@ -19,6 +18,13 @@ export class RecipeListComponent implements OnInit {
   getRecipes() {
     this.recipesService.getRecipesByUser().subscribe(recipes => {
       this.recipes = recipes
+    })
+  }
+
+  isStarred(id) {
+    this.recipesService.isStarred(id).subscribe(res => {
+      console.log(res)
+      return res
     })
   }
 }
