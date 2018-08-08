@@ -10,9 +10,15 @@
     </div>
   </div>
   <div id="my-recipes">
-    <a [routerLink]="['/profile/recipes']">My recipes</a>
+    <div *ngFor="let recipe of recipeArray">
+      <app-recipe-card [recipe]='recipe'></app-recipe-card>
+    </div>
+    <a mat-flat-button color="warn" [routerLink]="['/profile/recipes']">My recipes</a>
   </div>
   <div id="my-photos">
-    <a [routerLink]="['/profile/photos']">My photos</a>
+    <div *ngFor="let photo of photoArray">
+      <app-photo-card [photo]='photo'></app-photo-card>
+    </div>
+    <a mat-flat-button color="warn" [routerLink]="['/profile/photos']">My photos</a>
   </div>
 </div>

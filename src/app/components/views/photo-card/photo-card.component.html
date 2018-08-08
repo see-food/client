@@ -1,7 +1,7 @@
 <mat-card class="example-card">
   <img mat-card-md-image src="{{photo.path}}">
   <mat-card-actions>
-    <a class="del" mat-button (click)="onDeletePhoto(photo._id)"><i class="material-icons md-48">favorite_border</i></a>
+    <a class="del" mat-button (click)="onDeletePhoto(photo._id)"><i class="material-icons md-48">delete_forever</i></a>
     <a mat-button [routerLink]="['/photo/' + photo._id]">DETAILS</a>
   </mat-card-actions>
 </mat-card>

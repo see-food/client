@@ -25,12 +25,12 @@ export class ProfilePageComponent implements OnInit {
     })
     this.photoService.getPhotosByUser().subscribe(photos=>{
       this.photoArray = photos;
-      this.photoArray = this.photoArray.slice(0,4);
+      this.photoArray = this.photoArray.slice(this.photoArray.length-4);
       console.log(this.photoArray)
     })
     this.recipeService.getRecipesByUser().subscribe(recipes=>{
       this.recipeArray = recipes;
-      this.recipeArray = this.recipeArray.slice(0,4);
+      this.recipeArray = this.recipeArray.slice(this.recipeArray.length-4);
       console.log(this.recipeArray)
     })
   }
