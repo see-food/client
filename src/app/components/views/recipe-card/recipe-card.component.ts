@@ -12,7 +12,7 @@ export class RecipeCardComponent implements OnInit {
   @Output() toggleFav = new EventEmitter<any>();
 
   userRecipes: any = []
-  
+
 
   constructor(private recipesService: RecipesService) { }
 
@@ -33,7 +33,7 @@ export class RecipeCardComponent implements OnInit {
   }
 
   isStarred(id) {
-    if (this.userRecipes.filter(e => e == id).length > 0) {
+    if (this.userRecipes.filter(e => e._id == id).length > 0) {
       return 'yep'
     } else {
       return 'nope'
