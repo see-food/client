@@ -4,7 +4,7 @@
     <mat-card-subtitle>{{recipe.name}}</mat-card-subtitle>
   </mat-card-content>
   <mat-card-actions>
-    <a class="fav" mat-button (click)="toggleFav(recipe._id)"><i class="material-icons md-48">favorite_border</i></a>
+    <a class="fav" mat-button (click)="onToggleFav(recipe._id)"><i class="material-icons md-48">favorite_border</i></a>
     <a mat-button [routerLink]="['/recipe/' + recipe._id]">DETAILS</a>
   </mat-card-actions>
 </mat-card>
