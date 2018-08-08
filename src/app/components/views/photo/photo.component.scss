@@ -83,19 +83,11 @@
       .recipes {
         height: 50%;
         width: 100%;
-        overflow-x: scroll;
         .all-recipes {
+          overflow-x: scroll;
           height: 90%;
           display: flex;
-          justify-content: space-around;
           align-items: baseline;
-          padding-left: 15vw;
-          * {
-            margin-right: 1vw;
-          }
-          :last-child {
-            margin-right: 1.5vw;
-          }
         }
       }
     }
