@@ -7,6 +7,7 @@ import { ProfilePageComponent } from "./components/views/profile-page/profile-pa
 import { PhotoUploadComponent } from "./components/views/photo-upload/photo-upload.component";
 import { PhotoExchangeComponent } from "./components/views/photo-exchange/photo-exchange.component";
 import { RecipeListComponent } from './components/views/recipe-list/recipe-list.component'
+import { PhotoListComponent } from './components/views/photo-list/photo-list.component'
 import { RecipeComponent } from './components/views/recipe/recipe.component'
 import { PhotoComponent } from "./components/views/photo/photo.component";
 
@@ -21,5 +22,6 @@ export const routes: Routes = [
   { path: 'photo/wait/:id', component: PhotoExchangeComponent},
   { path: 'photo/:id', component: PhotoComponent},
   { path: 'profile/recipes', component: RecipeListComponent },
-  { path: 'recipe/:id', component: RecipeComponent }
+  { path: 'recipe/:id', component: RecipeComponent },
+  { path: 'profile/photos', component: PhotoListComponent}
 ]
