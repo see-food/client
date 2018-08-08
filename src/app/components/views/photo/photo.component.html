@@ -8,7 +8,7 @@
     <div class="recipes">
       <div class="all-recipes">
         <div class="recipe" *ngFor="let recipe of photo.recipes">
-          <app-recipe-card [recipe]="recipe"></app-recipe-card>
+          <app-recipe-card [recipe]="recipe" (toggleFav)="toggleFav($event)"></app-recipe-card>
         </div>
       </div>
     </div>

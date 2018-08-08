@@ -1,4 +1,4 @@
-<div class="container" *ngIf="this.user">
+<div class="container" *ngIf="user">
   <div class="username">
     <label>Username</label>
     <h2>{{user.username}}</h2>
@@ -8,7 +8,5 @@
     <h2>{{user.email}}</h2>
   </div>
   <div id="my-recipes"></div>
+  <a [routerLink]="['/profile/recipes']">recipes</a>
 </div>
-
-
-<a [routerLink]="['/profile/recipes']">recipes</a>

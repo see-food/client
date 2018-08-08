@@ -21,10 +21,8 @@ export class RecipeListComponent implements OnInit {
     })
   }
 
-  isStarred(id) {
-    this.recipesService.isStarred(id).subscribe(res => {
-      console.log(res)
-      return res
-    })
+  unfav(id) {
+    this.recipesService.starRecipe(id).subscribe()
+    this.recipes = this.recipes.filter(e => e._id != id)
   }
 }

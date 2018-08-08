@@ -49,7 +49,7 @@ export class SessionService {
     return this.http.get(`${environment.BASE_URL}/api/loggedin`, this.options).pipe(
       map( (res:Response) => {
         this.user = res.json();
-        console.log(`Automatically login ${this.user.username}`);
+        //console.log(`Automatically login ${this.user.username}`);
         return this.user;
       }),
       catchError( e => {console.log("You have to login first!"); return of(e) })
