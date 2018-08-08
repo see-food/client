@@ -1,15 +1,22 @@
+@import '../../../../scss/variables';
+@import '../../../../scss/fonts';
+
 mat-card{
   img{
-
+    object-fit: fit;
   }
   mat-card-content{
     mat-card-subtitle{
-
+      font: $text-font;
+      font-weight: bold;
     }
   }
   mat-card-actions{
+    display:flex;
+    justify-content: center;
+    align-items: center;
     .fav{
-      
+      display: inline;
     }
   }
 }

@@ -7,7 +7,7 @@
     <h3>And we found this related recipes!</h3>
     <div class="recipes">
       <div class="all-recipes">
-        <div *ngFor="let recipe of photo.recipes">
+        <div class="recipe" *ngFor="let recipe of photo.recipes">
           <app-recipe-card [recipe]="recipe"></app-recipe-card>
         </div>
       </div>
