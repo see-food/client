@@ -36,3 +36,24 @@
     align-items: center;
   }
 }
+
+@media (max-width: 767px){
+  .container{
+    align-items: center;
+    .user-info{
+      flex-direction: column;
+    }
+    #my-recipes{
+      height: 20%;
+      div{
+        display: none;
+      }
+    }
+    #my-photos{
+      height: 20%;
+      div{
+        display: none;
+      }
+    }
+  }
+}

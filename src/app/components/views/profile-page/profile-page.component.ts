@@ -35,4 +35,9 @@ export class ProfilePageComponent implements OnInit {
     })
   }
 
+  deletePhoto(id) {
+    this.photoService.deletePhotoById(id).subscribe()
+    this.photoArray = this.photoArray.filter(e => e._id != id)
+  }
+
 }

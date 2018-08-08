@@ -17,7 +17,7 @@
   </div>
   <div id="my-photos">
     <div *ngFor="let photo of photoArray">
-      <app-photo-card [photo]='photo'></app-photo-card>
+      <app-photo-card [photo]='photo' (deletePhoto)="deletePhoto($event)"></app-photo-card>
     </div>
     <a mat-flat-button color="warn" [routerLink]="['/profile/photos']">My photos</a>
   </div>
