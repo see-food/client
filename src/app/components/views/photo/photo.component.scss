@@ -36,6 +36,22 @@
       font-weight: bold;
       color: black;
     }
+
+    .wait{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img{
+        max-height: 100%;
+        max-width: 50%
+      }
+      h2{
+        font: $text-font;
+        font-weight: bold;
+        
+      }
+    }
+
     .recipes {
       height: 40%;
       width: 100%;
@@ -49,6 +65,7 @@
     }
   }
 }
+
 
 @media(max-width: 767px) {
   .container {
