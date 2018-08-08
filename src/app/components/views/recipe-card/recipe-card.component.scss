@@ -2,11 +2,21 @@
 @import '../../../../scss/fonts';
 
 mat-card{
+  height: 20vh;
+  width: 20vh;
+  margin: 0 0.5vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+  align-items: center;
   img{
+    max-height: 40%;
+    max-width: 40%;
     object-fit: fit;
   }
   mat-card-content{
     mat-card-subtitle{
+      margin-top: 1vh;
       font: $text-font;
       font-weight: bold;
     }
@@ -20,3 +30,4 @@ mat-card{
     }
   }
 }
+
