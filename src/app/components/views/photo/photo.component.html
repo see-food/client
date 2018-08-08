@@ -5,12 +5,16 @@
       <img src="{{photo.path}}" alt="photo">
     </div>
     <h3>And we found this related recipes!</h3>
-    <div class="recipes">
+    <div class="recipes" *ngIf="photo.recipes.length">
       <div class="all-recipes">
         <div class="recipe" *ngFor="let recipe of photo.recipes">
           <app-recipe-card [recipe]="recipe" (toggleFav)="toggleFav($event)"></app-recipe-card>
         </div>
       </div>
+    </div>
+    <div class="wait" *ngIf="!photo.recipes.length">
+      <img src="/assets/lobster-icon.png" alt="">
+      <h2>Wait a few seconds, we are looking for your recipes</h2>
     </div>
   </div>
 </div>
