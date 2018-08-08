@@ -37,15 +37,14 @@
       color: black;
     }
     .recipes {
-      height: 50%;
+      height: 40%;
       width: 100%;
-      overflow-x: scroll;
       .all-recipes {
-        height: 90%;
+        overflow-x: scroll;
+        height: 100%;
         display: flex;
-        justify-content: space-around;
         align-items: baseline;
-        padding-left: 3vw;
+        
       }
     }
   }
@@ -91,10 +90,10 @@
           justify-content: space-around;
           align-items: baseline;
           padding-left: 15vw;
-          *{
+          * {
             margin-right: 1vw;
           }
-          :last-child{
+          :last-child {
             margin-right: 1.5vw;
           }
         }
