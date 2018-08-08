@@ -37,9 +37,14 @@ export class PhotosService {
     )
   }
 
-  // getRecipesByPhotoId() {
-  //
-  // }
+  deletePhotoById(id) {
+    return this.http.get(`${environment.BASE_URL}/api/pics/delete/${id}`, this.options).pipe(
+      map((res: Response) => {
+        return res.json()
+      }),
+      catchError(e => of(this.errorHandler(e)))
+    )
+  }
 
   //Error handler method
   errorHandler(e) {

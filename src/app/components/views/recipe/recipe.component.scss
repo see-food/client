@@ -1,0 +1,83 @@
+@import '../../../../scss/variables';
+@import '../../../../scss/fonts';
+.container {
+  width: 80%;
+  height: 78vh;
+  position: relative;
+  margin: 1vh auto;
+  .recipe {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    .recipe-info {
+      display: flex;
+      justify-content: space-around;
+      align-items: baseline;
+      height:40%;
+      width: 100%;
+      .recipe-photo {
+        img {
+          border-radius: 50%;
+        }
+      }
+      .recipe-text {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        a{
+          cursor:pointer;
+        }
+        h1{
+          font: $title-font;
+          color: $red-font;
+          font-size: 2rem;
+          margin: 0;
+        }
+      }
+    }
+    .lists-container {
+      height: 60%;
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: baseline;
+      div{
+        h3{
+          font: $text-font;
+          font-weight: bold;
+          margin: 1vh 0;
+        }
+        div{
+          h4{
+            font: $text-font;
+            margin: 1vh 0;
+          }
+        }
+      }
+      .ingredients-container {
+        overflow: auto;
+        width: 50%;
+        max-height: 100%;
+        
+      }
+      .steps-container {
+        overflow: scroll;
+        width: 50%;
+        max-height: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px){
+  .container {
+    
+    .recipe {
+      .recipe-info{
+        align-items: flex-start;
+      }
+    }
+  }
+}

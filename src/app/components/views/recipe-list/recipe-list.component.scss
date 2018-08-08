@@ -1,0 +1,32 @@
+@import '../../../../scss/variables';
+@import '../../../../scss/fonts';
+.container {
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  align-items: center;
+  justify-content: center;
+  div {
+    div {
+      h1 {
+        font: $title-font;
+        font-size: 2rem;
+        color: $red-font;
+        text-align: center;
+      }
+    }
+
+    #my-recipes {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-content: center;
+      flex-wrap: wrap;
+      *{
+        margin-top: 1vh;
+      }
+    }
+  }
+}

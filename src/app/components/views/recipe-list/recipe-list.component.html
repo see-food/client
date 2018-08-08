@@ -1,5 +1,20 @@
-<div>
-  <div *ngFor="let recipe of recipes">
-    <app-recipe-card [recipe]="recipe"></app-recipe-card>
+<div class="container">
+  <div *ngIf="!recipes">
+    Loading your recipes
+  </div>
+  <div *ngIf="recipes">
+    <div class="no-recipes" *ngIf="recipes.length < 1">
+      <h1>
+        You don't have saved recipes yet, take a photo and save some of them!
+      </h1>
+    </div>
+    <div>
+      <h1>My favourite recipes!</h1>
+      <div id="my-recipes">
+        <div *ngFor="let recipe of recipes">
+          <app-recipe-card [recipe]="recipe" (toggleFav)="unfav($event)"></app-recipe-card>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

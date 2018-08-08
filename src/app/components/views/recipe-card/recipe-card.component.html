@@ -1,10 +1,13 @@
 <mat-card class="example-card">
   <img mat-card-md-image src="{{recipe.images[0]}}" alt="{{recipe.name}}">
   <mat-card-content>
-    <mat-card-title>{{recipe.name}}</mat-card-title>
+    <mat-card-subtitle>{{recipe.name}}</mat-card-subtitle>
   </mat-card-content>
   <mat-card-actions>
-    <a mat-button (click)="toggleFav(recipe._id)">LIKE/UNLIKE</a>
+    <a mat-button (click)="onToggleFav(recipe._id)">
+      <i *ngIf="starred=='nope'" class="material-icons md-48">favorite_border</i>
+      <i *ngIf="starred=='yep'" class="material-icons md-48 fav">favorite</i>
+    </a>
     <a mat-button [routerLink]="['/recipe/' + recipe._id]">DETAILS</a>
   </mat-card-actions>
 </mat-card>

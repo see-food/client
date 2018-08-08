@@ -1,7 +1,32 @@
-<p>
-  recipe works!
-</p>
-
-<p>
-  {{recipe.name}}
-</p>
+<div class="container">
+  <p *ngIf="!recipe">
+    Recipe loading
+  </p>
+  <div class="recipe" *ngIf="recipe">
+    <div class="recipe-info">
+      <div class="recipe-photo">
+        <img src="{{recipe.images[0]}}" alt="photo-recipe" width="150px" height="150px">
+      </div>
+      <div class="recipe-text">
+        <a (click)="toggleFav(recipe._id)">
+          <i class="material-icons md-48">favorite_border</i>
+        </a>
+        <h1>{{recipe.name}}</h1>
+      </div>
+    </div>
+    <div class="lists-container">
+      <div class="ingredients-container">
+        <h3>Ingredients</h3>
+        <div *ngFor="let ingredient of recipe.ingredients">
+          <h4>{{ingredient}}</h4>
+        </div>
+      </div>
+      <div class="steps-container">
+          <h3>Steps</h3>
+          <div *ngFor="let step of recipe.instructions">
+            <h4>{{step}}</h4>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

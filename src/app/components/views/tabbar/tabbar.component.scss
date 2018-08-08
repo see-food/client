@@ -7,7 +7,8 @@
 
 @media (max-width: 767px) {
   #tab-bar {
-    position: absolute;
+    position: fixed;
+    background-color: white;
     bottom: 0;
     left: 0;
     width: 80%;
@@ -16,6 +17,7 @@
     justify-content: space-between;
     align-items: center;
     list-style: none;
+    margin: 0;
     li {
       a {
         text-decoration: none;

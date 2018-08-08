@@ -1,3 +1,18 @@
-<p>
-  photo-list works!
-</p>
+<div class="container">
+  <div *ngIf="!photos">
+    Loading your recipes
+  </div>
+  <div *ngIf="photos">
+    <div class="no-photos" *ngIf="photos.length < 1">
+      You don't have uploaded any photo yet, take one and discover some recipes!
+    </div>
+    <div>
+      <h1>My uploaded photos!</h1>
+      <div id="my-photos">
+        <div *ngFor="let photo of photos">
+          <app-photo-card [photo]="photo" (deletePhoto)="deletePhoto($event)"></app-photo-card>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

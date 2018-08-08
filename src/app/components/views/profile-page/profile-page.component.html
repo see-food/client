@@ -1,14 +1,24 @@
-<div class="container" *ngIf="this.user">
-  <div class="username">
-    <label>Username</label>
-    <h2>{{user.username}}</h2>
+<div class="container" *ngIf="user">
+  <div class="user-info">
+    <div class="username">
+      <label>Username</label>
+      <h2>{{user.username}}</h2>
+    </div>
+    <div class="email">
+      <label>Email</label>
+      <h2>{{user.email}}</h2>
+    </div>
   </div>
-  <div class="email">
-    <label>Email</label>
-    <h2>{{user.email}}</h2>
+  <div id="my-recipes">
+    <div *ngFor="let recipe of recipeArray">
+      <app-recipe-card [recipe]='recipe'></app-recipe-card>
+    </div>
+    <a mat-flat-button color="warn" [routerLink]="['/profile/recipes']">My recipes</a>
   </div>
-  <div id="my-recipes"></div>
+  <div id="my-photos">
+    <div *ngFor="let photo of photoArray">
+      <app-photo-card [photo]='photo' (deletePhoto)="deletePhoto($event)"></app-photo-card>
+    </div>
+    <a mat-flat-button color="warn" [routerLink]="['/profile/photos']">My photos</a>
+  </div>
 </div>
-
-
-<a [routerLink]="['/profile/recipes']">recipes</a>
