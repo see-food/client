@@ -1,6 +1,16 @@
 <div class="container" *ngIf="photo">
-    <img src="{{photo.path}}" alt="photo">
-    <div *ngFor="let recipe of photo.recipes">
-      <app-recipe-card [recipe]="recipe"></app-recipe-card>
+  <div class="photo">
+    <div class="img-container">
+      <h3>This is your photo</h3>
+      <img src="{{photo.path}}" alt="photo">
+    </div>
+    <h3>And we found this related recipes!</h3>
+    <div class="recipes">
+      <div class="all-recipes">
+        <div *ngFor="let recipe of photo.recipes">
+          <app-recipe-card [recipe]="recipe"></app-recipe-card>
+        </div>
+      </div>
     </div>
   </div>
+</div>

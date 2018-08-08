@@ -1,0 +1,105 @@
+@import '../../../../scss/variables';
+@import '../../../../scss/fonts';
+.container {
+  position: relative;
+  margin: 0 auto;
+  height: 88vh;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .photo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+    width: 100%;
+    height: 100%;
+    .img-container {
+      height: 40%;
+      img {
+        max-height: 90%;
+        max-width: 90%;
+        object-fit: contain;
+      }
+      h3 {
+        margin: 0;
+        font: $title-font;
+        color: $red-font;
+        font-weight: bold;
+      }
+    }
+  }
+  h3 {
+    font: $title-font;
+    margin: 0;
+    font-weight: bold;
+  }
+  .recipes {
+    height: 50%;
+    width: 100%;
+    overflow-x: scroll;
+    .all-recipes {
+      height: 90%;
+      display: flex;
+      justify-content: space-around;
+      align-items: baseline;
+      * {
+        margin: 0 1vw;
+      }
+    }
+  }
+}
+
+@media(max-width: 767px) {
+  .container {
+    position: relative;
+    margin: 0 auto;
+    height: 75vh;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .photo {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      height: 100%;
+      .img {
+        max-height: 30%;
+        img {
+          max-height: 90%;
+          max-width: 90%;
+          object-fit: contain;
+        }
+        h3 {
+          margin: 0;
+          font: $title-font;
+          color: $red-font;
+          font-weight: bold;
+        }
+      }
+      .recipes {
+        max-height: 40%;
+        h3 {
+          font: $title-font;
+          margin: 0;
+          font-weight: bold;
+        }
+        mat-list {
+          height: 90%;
+          overflow: auto;
+          -ms-overflow-style: -ms-autohiding-scrollbar;
+          mat-list-item {
+            h4 {
+              margin: 0;
+              font: $text-font;
+            }
+          }
+        }
+      }
+    }
+  }
+}
