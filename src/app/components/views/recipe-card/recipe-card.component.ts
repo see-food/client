@@ -12,6 +12,7 @@ export class RecipeCardComponent implements OnInit {
   @Output() toggleFav = new EventEmitter<any>();
 
   userRecipes: any = []
+  
 
   constructor(private recipesService: RecipesService) { }
 

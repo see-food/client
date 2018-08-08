@@ -8,6 +8,7 @@ import { RecipesService } from '../../../services/recipes.service'
 })
 export class RecipeListComponent implements OnInit {
   recipes: any
+  fav: boolean = true;
 
   constructor(private recipesService: RecipesService) { }
 
@@ -22,6 +23,7 @@ export class RecipeListComponent implements OnInit {
   }
 
   unfav(id) {
+    this.fav = false;
     this.recipesService.starRecipe(id).subscribe()
     this.recipes = this.recipes.filter(e => e._id != id)
   }
