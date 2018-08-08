@@ -25,6 +25,7 @@ import { RecipeComponent } from './components/views/recipe/recipe.component';
 import { RecipeCardComponent } from './components/views/recipe-card/recipe-card.component';
 import { PhotoCardComponent } from './components/views/photo-card/photo-card.component';
 import { PhotoComponent } from './components/views/photo/photo.component';
+import { SearchPipe } from './pipes/search.pipe';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { PhotoComponent } from './components/views/photo/photo.component';
     RecipeComponent,
     RecipeCardComponent,
     PhotoCardComponent,
-    PhotoComponent
+    PhotoComponent,
+    SearchPipe
   ],
   imports: [
     BrowserModule,
