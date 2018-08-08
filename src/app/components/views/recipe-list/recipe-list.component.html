@@ -6,7 +6,8 @@
     <div *ngIf="recipes.length < 1">
       You don't have saved recipes yet, take a photo and save some of them!
     </div>
-    <div *ngFor="let recipe of recipes">
+    <input type="text" placeholder="Search foods" [(ngModel)]="searchTerm" />
+    <div *ngFor="let recipe of recipes | search:searchTerm">
       <app-recipe-card [recipe]="recipe" (toggleFav)="unfav($event)"></app-recipe-card>
     </div>
   </div>
