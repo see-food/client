@@ -9,7 +9,7 @@ import { RecipesService } from '../../../services/recipes.service';
 })
 export class RecipeComponent implements OnInit {
   recipe: any
-  favorite: boolean
+  favorite: any
 
   constructor(private recipesService: RecipesService, private route: ActivatedRoute) { }
 
@@ -29,8 +29,11 @@ export class RecipeComponent implements OnInit {
   }
 
   toggleFav(id) {
-    console.log(id)
     this.recipesService.starRecipe(id).subscribe()
-    this.favorite = !this.favorite
+    if (this.favorite == 'yep') {
+      this.favorite = 'nope'
+    } else {
+      this.favorite = 'yep'
+    }
   }
 }

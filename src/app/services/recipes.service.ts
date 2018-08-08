@@ -60,8 +60,7 @@ export class RecipesService {
   isStarred(id) {
     return this.http.get(`${environment.BASE_URL}/api/recipes/isfav/${id}`, this.options).pipe(
       map(( res: Response ) => {
-        if (res.json().message == true) return true
-        return false
+        return res.json().message
       }),
       catchError(e => of(this.errorHandler(e)))
     )
