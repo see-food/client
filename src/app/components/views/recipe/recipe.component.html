@@ -2,6 +2,13 @@
   recipe works!
 </p>
 
-<p>
+<p *ngIf="recipe">
   {{recipe.name}}
+  <br />
+  <a (click)="toggleFav(recipe._id)">Fav</a>
+</p>
+
+
+<p *ngIf="favorite">
+  {{favorite}}
 </p>
