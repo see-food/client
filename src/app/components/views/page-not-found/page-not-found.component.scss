@@ -1,0 +1,51 @@
+@import '../../../../scss/variables';
+@import '../../../../scss/fonts';
+.container {
+  height: 75vh;
+  width: 80%;
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .not-found {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 100%;
+    max-width: 100%;
+    .img-container {
+      height: 20%;
+      img {
+        max-height: 100%;
+      }
+    }
+    .text-container {
+      h1 {
+        font: $title-font;
+        color: $red-font;
+        size: 2rem;
+      }
+      h2 {
+        font: $text-font;
+        a {
+          color: $red-font;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    .not-found {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      max-height: 100%;
+      max-width: 100%;
+    }
+  }
+}

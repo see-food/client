@@ -22,10 +22,12 @@ export class PhotoUploadComponent implements OnInit {
   ngOnInit() {
     this.uploader.onSuccessItem = (item, response) => {
       this.feedback = JSON.parse(response).message;
+      console.log(this.feedback)
     };
 
     this.uploader.onErrorItem = (item, response, status, headers) => {
       this.feedback = JSON.parse(response).message;
+      console.log(this.feedback)
     }
   }
 

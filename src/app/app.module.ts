@@ -26,6 +26,8 @@ import { RecipeCardComponent } from './components/views/recipe-card/recipe-card.
 import { PhotoCardComponent } from './components/views/photo-card/photo-card.component';
 import { PhotoComponent } from './components/views/photo/photo.component';
 import { SearchPipe } from './pipes/search.pipe';
+import { SessionGuardService } from './services/session.guard';
+import { PageNotFoundComponent } from './components/views/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +47,8 @@ import { SearchPipe } from './pipes/search.pipe';
     RecipeCardComponent,
     PhotoCardComponent,
     PhotoComponent,
-    SearchPipe
+    SearchPipe,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -64,7 +67,8 @@ import { SearchPipe } from './pipes/search.pipe';
   ],
   providers: [
     SessionService,
-    RecipesService
+    RecipesService,
+    SessionGuardService
   ],
   bootstrap: [AppComponent]
 })
