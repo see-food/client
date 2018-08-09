@@ -5,7 +5,9 @@
   <mat-card-content>
     <mat-card-actions>
       <a class="del" mat-button (click)="onDeletePhoto(photo._id)"><i class="material-icons md-48">delete_forever</i></a>
-      <a mat-button [routerLink]="['/photo/' + photo._id]">DETAILS</a>
+      <a mat-button [routerLink]="['/photo/' + photo._id]">
+        <i class="material-icons md-48">more_horiz</i>
+      </a>
     </mat-card-actions>
   </mat-card-content>
 </mat-card>
