@@ -12,7 +12,9 @@
         <i *ngIf="starred=='nope'" class="material-icons md-48">favorite_border</i>
         <i *ngIf="starred=='yep'" class="material-icons md-48 fav">favorite</i>
       </a>
-      <a mat-button [routerLink]="['/recipe/' + recipe._id]">DETAILS</a>
+      <a mat-button [routerLink]="['/recipe/' + recipe._id]">
+        <i class="material-icons md-48">more_horiz</i>
+      </a>
     </mat-card-actions>
   </mat-card-content>
 </mat-card>
