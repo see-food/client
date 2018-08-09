@@ -1,6 +1,6 @@
 @import '../../../../scss/variables';
 @import '../../../../scss/fonts';
-.container{
+.container {
   position: relative;
   margin: 0 auto;
   height: 88vh;
@@ -9,47 +9,85 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  .photo{
-    display:flex;
-    justify-content: space-around;
-    align-items: baseline;
-    .img{
+  .foundInfo {
+    .photo {
+      display: flex;
+      justify-content: space-around;
+      align-items: baseline;
+      .img {
+        height: 60%;
+        img {
+          max-height: 90%;
+          max-width: 90%;
+          object-fit: contain;
+        }
+        h3 {
+          margin: 0;
+          font: $title-font;
+          color: $red-font;
+          font-weight: bold;
+        }
+      }
+    }
+    .info {
       height: 60%;
-      img{
+      h3 {
+        font: $title-font;
+        margin: 0;
+        font-weight: bold;
+      }
+      mat-list {
+        height: 90%;
+        overflow: auto;
+        mat-list-item {
+          h4 {
+            margin: 0;
+            font: $text-font;
+          }
+        }
+      }
+    }
+  }
+  .no-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    .img {
+      max-height: 60%;
+      img {
         max-height: 90%;
         max-width: 90%;
         object-fit: contain;
       }
-      h3{
+      h3 {
         margin: 0;
         font: $title-font;
         color: $red-font;
         font-weight: bold;
       }
     }
-  }
-  .info{
-    height: 60%;
-    h3{
-      font: $title-font;
-      margin: 0;
-      font-weight: bold;
-    }
-    mat-list{
-      height: 90%;
-      overflow: auto;
-      mat-list-item{
-        h4{
-          margin:0;
-          font: $text-font;
-        }
+    .info {
+      margin-top: 1vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      img {
+        max-height: 90%;
+        max-width: 90%;
+        object-fit: contain;
+      }
+      h3 {
+        margin: 0;
+        margin-bottom: 1vh;
+        font: $text-font;
       }
     }
   }
 }
 
-@media(max-width: 767px){
-  .container{
+@media(max-width: 767px) {
+  .container {
     position: relative;
     margin: 0 auto;
     height: 75vh;
@@ -58,45 +96,81 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    .photo{
-      display:flex;
-      flex-direction: column;
-      align-items: flex-start;
+    .foundInfo {
       height: 100%;
-      .img{
-        max-height: 50%;
-        img{
+      .photo {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        height: 100%;
+        .img {
+          max-height: 50%;
+          img {
+            max-height: 90%;
+            max-width: 90%;
+            object-fit: contain;
+          }
+          h3 {
+            margin: 0;
+            font: $title-font;
+            color: $red-font;
+            font-weight: bold;
+          }
+        }
+        .info {
+          max-height: 45%;
+          h3 {
+            font: $title-font;
+            margin: 0;
+            font-weight: bold;
+          }
+          mat-list {
+            height: 90%;
+            overflow: auto;
+            mat-list-item {
+              h4 {
+                margin: 0;
+                font: $text-font;
+              }
+            }
+          }
+        }
+      }
+    }
+    .no-info{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100%;
+      .img {
+        max-height: 40%;
+        img {
           max-height: 90%;
           max-width: 90%;
           object-fit: contain;
         }
-        h3{
+        h3 {
           margin: 0;
           font: $title-font;
           color: $red-font;
           font-weight: bold;
         }
       }
-      .info{
+      .info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         max-height: 45%;
-        h3{
+        h3 {
           font: $title-font;
           margin: 0;
           font-weight: bold;
         }
-        mat-list{
-          height: 90%;
-          overflow: auto;
-          mat-list-item{
-            h4{
-              margin:0;
-              font: $text-font;
-            }
-          }
+        img{
+          max-width: 50%;
+          max-height: 50%;
         }
       }
     }
-
-    
   }
 }

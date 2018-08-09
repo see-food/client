@@ -10,7 +10,9 @@ import { ActivatedRoute } from '@angular/router';
 export class PhotoExchangeComponent implements OnInit {
 
   photoId: string;
-  photo: any;
+  photo: any = {
+  clarifaiInfo : []
+  };
   constructor(private photoService: PhotosService, private route: ActivatedRoute) { }
 
   ngOnInit() {
