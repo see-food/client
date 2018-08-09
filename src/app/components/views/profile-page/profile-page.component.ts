@@ -16,7 +16,7 @@ export class ProfilePageComponent implements OnInit {
 
   constructor(private sessionService: SessionService,
               private photoService: PhotosService,
-              private recipeService: RecipesService) { 
+              private recipeService: RecipesService) {
   }
 
   ngOnInit() {
@@ -40,4 +40,7 @@ export class ProfilePageComponent implements OnInit {
     this.photoArray = this.photoArray.filter(e => e._id != id)
   }
 
+  toggleFav(id) {
+    this.recipeService.starRecipe(id).subscribe()
+  }
 }
