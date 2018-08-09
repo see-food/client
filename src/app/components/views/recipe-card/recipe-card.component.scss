@@ -29,17 +29,17 @@ mat-card {
       font: $text-font;
       font-weight: bold;
     }
-  }
 
-  mat-card-actions {
-    padding: 0 0.5vh;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    a{
-      .fav{
-        color: $red-font;
+    mat-card-actions {
+      padding: 0 0.5vh;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      a{
+        .fav{
+          color: $red-font;
+        }
       }
     }
-  }
+  }  
 }
