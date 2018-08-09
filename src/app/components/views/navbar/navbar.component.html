@@ -11,8 +11,7 @@
     <li><a *ngIf="!sessionService.user" mat-menu-item [routerLink]="['/signup']">SignUp</a></li>
     <li><a *ngIf="sessionService.user" mat-menu-item [routerLink]="['/home']">Home</a></li>
     <li><a *ngIf="sessionService.user" mat-menu-item [routerLink]="['/profile']">Profile</a></li>
-    <li><a *ngIf="sessionService.user" mat-menu-item [routerLink]="['/newPhoto']">Photos</a></li>
-    <li><a *ngIf="sessionService.user" mat-menu-item (click)="logout()">Logout</a></li>
+    <li><a *ngIf="sessionService.user" mat-menu-item [routerLink]="['/newPhoto']">Upload photo</a></li>
   </ul>
   <div class="menu-container">
     <button mat-stroked-button [matMenuTriggerFor]="menu">Menu</button>
@@ -21,8 +20,7 @@
       <a *ngIf="!sessionService.user" mat-menu-item [routerLink]="['/signup']">SignUp</a>
       <a *ngIf="sessionService.user" mat-menu-item [routerLink]="['/home']">Home</a>
       <a *ngIf="sessionService.user" mat-menu-item [routerLink]="['/profile']">Profile</a>
-      <a *ngIf="sessionService.user" mat-menu-item [routerLink]="['/newPhoto']">Photos</a>
-      <a *ngIf="sessionService.user" mat-menu-item (click)="logout()">Logout</a>
+      <a *ngIf="sessionService.user" mat-menu-item [routerLink]="['/newPhoto']">Upload photo</a>
     </mat-menu>
   </div>
 </nav>
