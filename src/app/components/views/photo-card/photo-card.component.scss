@@ -3,8 +3,8 @@
 
 mat-card {
   padding: 0;
-  height: 20vh;
-  width: 20vh;
+  height: 190px;
+  width: 190px;
   margin: 0 0.5vw;
   display: flex;
   flex-direction: column;
@@ -13,6 +13,7 @@ mat-card {
 
   .md-unstyled-image img {
     max-width: 100%;
+    min-height: 145px;
     width: 250px;
     height: auto !important;
     border-radius: 1%;

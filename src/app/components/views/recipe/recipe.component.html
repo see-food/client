@@ -4,8 +4,11 @@
   </p>
   <div class="recipe" *ngIf="recipe">
     <div class="recipe-info">
-      <div class="recipe-photo">
+      <div *ngIf="recipe.images[0]" class="recipe-photo">
         <img src="{{recipe.images[0].replace('125x70', '300x200')}}" alt="photo-recipe">
+      </div>
+      <div *ngIf="!recipe.images[0]" class="recipe-photo">
+        <img src="http://via.placeholder.com/300x200" alt="photo-recipe">
       </div>
       <div class="recipe-text">
         <div class="recipe-name">

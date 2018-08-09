@@ -1,6 +1,9 @@
 <mat-card class="example-card">
-  <div class="md-unstyled-image">
+  <div *ngIf="recipe.images[0]" class="md-unstyled-image">
     <img src="{{recipe.images[0].replace('125x70', '200x150')}}" alt="{{recipe.name}}">
+  </div>
+  <div *ngIf="!recipe.images[0]" class="md-unstyled-image">
+    <img src="http://via.placeholder.com/200x150" alt="{{recipe.name}}">
   </div>
   <mat-card-content>
     <mat-card-subtitle>{{recipe.name}}</mat-card-subtitle>
