@@ -5,30 +5,80 @@
   height: 78vh;
   position: relative;
   margin: 1vh auto;
+
   .recipe {
+    padding-top: 30px;
     display:flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100%;
+
     .recipe-info {
       display: flex;
+      flex-direction: row;
       justify-content: space-around;
-      align-items: baseline;
+      align-items: center;
       height:40%;
       width: 100%;
+
       .recipe-photo {
         img {
-          border-radius: 50%;
+          border-radius: 3%;
+          width: 300px;
+          height: 200px;
         }
       }
+
       .recipe-text {
         display: flex;
-        justify-content: flex-start;
-        align-items: center;
+        flex-direction: column;
+        align-items: flex-start;
+
+        .recipe-name {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+
+          a {
+            padding: 0 8px;
+            
+            .fav{
+              color: $red-font;
+            }
+          }
+        }
+
+        .recipe-properties {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+          align-items: center;
+
+          div {
+            padding: 0 8px;
+
+            h3 {
+              font: $title-font;
+            }
+          }
+        }
+
+        .recipe-pics {
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+
+          img {
+            padding: 0 5px;
+            border-radius: 6%;
+          }
+        }
+
         a{
           cursor:pointer;
         }
+
         h1{
           font: $title-font;
           color: $red-font;
@@ -37,6 +87,7 @@
         }
       }
     }
+
     .lists-container {
       height: 60%;
       width: 100%;
@@ -60,7 +111,7 @@
         overflow: auto;
         width: 50%;
         max-height: 100%;
-        
+
       }
       .steps-container {
         overflow: scroll;
@@ -73,10 +124,42 @@
 
 @media (max-width: 767px){
   .container {
-    
     .recipe {
-      .recipe-info{
-        align-items: flex-start;
+      .recipe-info {
+        flex-direction: column;
+        align-items: center;
+
+        .recipe-photo {
+          img {
+            width: 250px;
+            height: 150px;
+          }
+        }
+
+        .recipe-text {
+          .recipe-name {
+            padding: 5px 0;
+
+            a {
+              font-size: 14px;
+            }
+            h1 {
+              font-size: 17px;
+            }
+          }
+
+          .recipe-properties {
+            div {
+              h3 {
+                font-size: 14px;
+              }
+            }
+          }
+
+          .recipe-pics {
+            display: none;
+          }
+        }
       }
     }
   }

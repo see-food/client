@@ -5,26 +5,47 @@
   <div class="recipe" *ngIf="recipe">
     <div class="recipe-info">
       <div class="recipe-photo">
-        <img src="{{recipe.images[0]}}" alt="photo-recipe" width="150px" height="150px">
+        <img src="{{recipe.images[0].replace('125x70', '300x200')}}" alt="photo-recipe">
       </div>
       <div class="recipe-text">
-        <a (click)="toggleFav(recipe._id)">
-          <i class="material-icons md-48">favorite_border</i>
-        </a>
-        <h1>{{recipe.name}}</h1>
+        <div class="recipe-name">
+          <a (click)="toggleFav(recipe._id)">
+            <i *ngIf="favorite == 'nope'" class="material-icons md-48">favorite_border</i>
+            <i *ngIf="favorite == 'yep'" class="material-icons md-48 fav">favorite</i>
+          </a>
+          <h1>{{recipe.name}}</h1>
+        </div>
+        <div class="recipe-properties">
+          <div>
+            <h3>{{recipe.time}}</h3>
+          </div>
+          <div>
+            <h3>{{recipe.servings}} servings</h3>
+          </div>
+          <div>
+            <h3>{{recipe.calories}} calories</h3>
+          </div>
+        </div>
+        <div class="recipe-pics">
+          <img src="{{recipe.images[1].replace('125x70', '100x80')}}" alt="photo-recipe" width="100px" height="80px">
+          <img src="{{recipe.images[2].replace('125x70', '100x80')}}" alt="photo-recipe" width="100px" height="80px">
+          <img src="{{recipe.images[3].replace('125x70', '100x80')}}" alt="photo-recipe" width="100px" height="80px">
+          <img src="{{recipe.images[4].replace('125x70', '100x80')}}" alt="photo-recipe" width="100px" height="80px">
+          <img src="{{recipe.images[5].replace('125x70', '100x80')}}" alt="photo-recipe" width="100px" height="80px">
+        </div>
       </div>
     </div>
     <div class="lists-container">
       <div class="ingredients-container">
         <h3>Ingredients</h3>
         <div *ngFor="let ingredient of recipe.ingredients">
-          <h4>{{ingredient}}</h4>
+          <h4>- {{ingredient}}</h4>
         </div>
       </div>
       <div class="steps-container">
           <h3>Steps</h3>
-          <div *ngFor="let step of recipe.instructions">
-            <h4>{{step}}</h4>
+          <div *ngFor="let step of recipe.instructions, let i = index">
+            <h4>{{i + 1}} - {{step}}</h4>
           </div>
       </div>
     </div>
