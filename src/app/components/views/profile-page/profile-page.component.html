@@ -9,16 +9,53 @@
       <h2>{{user.email}}</h2>
     </div>
   </div>
-  <div id="my-recipes">
-    <div *ngFor="let recipe of recipeArray">
-      <app-recipe-card [recipe]='recipe'></app-recipe-card>
+  <div id="my-recipes" class="my-recipes">
+    <div *ngIf="!recipeArray">
+      <div class="title">
+        <h4>Loading your last recipes</h4>
+      </div>
     </div>
-    <a mat-flat-button color="warn" [routerLink]="['/profile/recipes']">My recipes</a>
+    <div *ngIf="recipeArray && recipeArray.length > 0">
+      <div class="title">
+        <h4>These are your last recipes</h4>
+        <a mat-flat-button color="warn" [routerLink]="['/profile/recipes']">More recipes</a>
+      </div>
+      <div class="recipes">
+        <div *ngFor="let recipe of recipeArray">
+          <app-recipe-card [recipe]='recipe'></app-recipe-card>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="recipeArray && recipeArray.length < 1">
+      <div class="title">
+        <h4>You dont have saved recipes yet, take some photos and save some recipes!</h4>
+        <a mat-flat-button color="warn" [routerLink]="['/newPhoto']">Take photo</a>
+      </div>
+    </div>
   </div>
-  <div id="my-photos">
-    <div *ngFor="let photo of photoArray">
-      <app-photo-card [photo]='photo' (deletePhoto)="deletePhoto($event)"></app-photo-card>
+
+  <div id="my-photos" class="my-photos">
+    <div *ngIf="!photoArray">
+      <div class="title">
+        <h4>Loading your last photos</h4>
+      </div>
     </div>
-    <a mat-flat-button color="warn" [routerLink]="['/profile/photos']">My photos</a>
+    <div *ngIf="photoArray && photoArray.length > 0">
+      <div class="title">
+        <h4>These are your last photos</h4>
+        <a mat-flat-button color="warn" [routerLink]="['/profile/photos']">More photos</a>
+      </div>
+      <div class="photos">
+        <div *ngFor="let photo of photoArray">
+          <app-photo-card [photo]='photo' (deletePhoto)="deletePhoto($event)"></app-photo-card>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="photoArray && photoArray.length < 1">
+      <div class="title">
+        <h4>You dont have photos yet, take some!</h4>
+        <a mat-flat-button color="warn" [routerLink]="['/newPhoto']">Take photo</a>
+      </div>
+    </div>
   </div>
 </div>
