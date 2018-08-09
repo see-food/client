@@ -1,6 +1,6 @@
 <div class="container">
   <div *ngIf="!recipes">
-    Loading your recipes
+    <h1>Loading your recipes</h1>
   </div>
   <div *ngIf="recipes">
     <div class="no-recipes" *ngIf="recipes.length < 1">
@@ -14,7 +14,7 @@
         <input matInput placeholder="Filter recipes" type="text" [(ngModel)]="searchTerm" />
       </mat-form-field>
       <div id="my-recipes">
-        <div *ngFor="let recipe of recipes | search:searchTerm"> 
+        <div *ngFor="let recipe of recipes | search:searchTerm">
           <app-recipe-card [recipe]="recipe" (toggleFav)="unfav($event)"></app-recipe-card>
         </div>
       </div>
