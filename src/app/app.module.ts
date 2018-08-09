@@ -27,6 +27,7 @@ import { PhotoCardComponent } from './components/views/photo-card/photo-card.com
 import { PhotoComponent } from './components/views/photo/photo.component';
 import { SearchPipe } from './pipes/search.pipe';
 import { SessionGuardService } from './services/session.guard';
+import { PageNotFoundComponent } from './components/views/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { SessionGuardService } from './services/session.guard';
     RecipeCardComponent,
     PhotoCardComponent,
     PhotoComponent,
-    SearchPipe
+    SearchPipe,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,

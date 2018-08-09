@@ -11,18 +11,20 @@ import { PhotoListComponent } from './components/views/photo-list/photo-list.com
 import { RecipeComponent } from './components/views/recipe/recipe.component'
 import { PhotoComponent } from "./components/views/photo/photo.component";
 import { SessionGuardService } from "./services/session.guard";
+import { PageNotFoundComponent } from "./components/views/page-not-found/page-not-found.component";
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'login',  component: LoginComponent },
   { path: 'signup',  component: SignupComponent },
-  { path: 'confirm/:id',  component: ConfirmComponent },
+  { path: 'confirm/:id',  component: ConfirmComponent , canActivate: [SessionGuardService] },
   { path: 'profile', component: ProfilePageComponent , canActivate: [SessionGuardService]},
-  { path: 'newPhoto', component: PhotoUploadComponent},
-  { path: 'photo/wait/:id', component: PhotoExchangeComponent},
-  { path: 'photo/:id', component: PhotoComponent},
-  { path: 'profile/recipes', component: RecipeListComponent },
-  { path: 'recipe/:id', component: RecipeComponent },
-  { path: 'profile/photos', component: PhotoListComponent}
+  { path: 'newPhoto', component: PhotoUploadComponent , canActivate: [SessionGuardService]},
+  { path: 'photo/wait/:id', component: PhotoExchangeComponent, canActivate: [SessionGuardService]},
+  { path: 'photo/:id', component: PhotoComponent, canActivate: [SessionGuardService]},
+  { path: 'profile/recipes', component: RecipeListComponent, canActivate: [SessionGuardService] },
+  { path: 'recipe/:id', component: RecipeComponent, canActivate: [SessionGuardService] },
+  { path: 'profile/photos', component: PhotoListComponent, canActivate: [SessionGuardService]},
+  { path: '**', component: PageNotFoundComponent}
 ]
