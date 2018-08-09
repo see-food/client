@@ -10,6 +10,7 @@ import { RecipeListComponent } from './components/views/recipe-list/recipe-list.
 import { PhotoListComponent } from './components/views/photo-list/photo-list.component'
 import { RecipeComponent } from './components/views/recipe/recipe.component'
 import { PhotoComponent } from "./components/views/photo/photo.component";
+import { SessionGuardService } from "./services/session.guard";
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -17,7 +18,7 @@ export const routes: Routes = [
   { path: 'login',  component: LoginComponent },
   { path: 'signup',  component: SignupComponent },
   { path: 'confirm/:id',  component: ConfirmComponent },
-  { path: 'profile', component: ProfilePageComponent},
+  { path: 'profile', component: ProfilePageComponent , canActivate: [SessionGuardService]},
   { path: 'newPhoto', component: PhotoUploadComponent},
   { path: 'photo/wait/:id', component: PhotoExchangeComponent},
   { path: 'photo/:id', component: PhotoComponent},
