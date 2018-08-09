@@ -43,6 +43,8 @@ a:visited{
   }
 }
 
-.container{
-  padding-bottom:10vh;
+@media(max-width: 767px){
+  .container{
+    padding-bottom:10vh;
+  }
 }
