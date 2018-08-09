@@ -30,11 +30,11 @@
           </div>
         </div>
         <div class="recipe-pics">
-          <img src="{{recipe.images[1].replace('125x70', '120x80')}}" alt="photo-recipe" width="120px" height="80px">
-          <img src="{{recipe.images[2].replace('125x70', '120x80')}}" alt="photo-recipe" width="120px" height="80px">
-          <img src="{{recipe.images[3].replace('125x70', '120x80')}}" alt="photo-recipe" width="120px" height="80px">
-          <img src="{{recipe.images[4].replace('125x70', '120x80')}}" alt="photo-recipe" width="120px" height="80px">
-          <img src="{{recipe.images[5].replace('125x70', '120x80')}}" alt="photo-recipe" width="120px" height="80px">
+          <img *ngIf="recipe.images[1]" src="{{recipe.images[1].replace('125x70', '120x80')}}" alt="photo-recipe" width="120px" height="80px">
+          <img *ngIf="recipe.images[2]" src="{{recipe.images[2].replace('125x70', '120x80')}}" alt="photo-recipe" width="120px" height="80px">
+          <img *ngIf="recipe.images[3]" src="{{recipe.images[3].replace('125x70', '120x80')}}" alt="photo-recipe" width="120px" height="80px">
+          <img *ngIf="recipe.images[4]" src="{{recipe.images[4].replace('125x70', '120x80')}}" alt="photo-recipe" width="120px" height="80px">
+          <img *ngIf="recipe.images[5]" src="{{recipe.images[5].replace('125x70', '120x80')}}" alt="photo-recipe" width="120px" height="80px">
         </div>
       </div>
     </div>
