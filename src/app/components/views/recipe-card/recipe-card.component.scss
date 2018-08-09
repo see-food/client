@@ -1,35 +1,45 @@
 @import '../../../../scss/variables';
 @import '../../../../scss/fonts';
 
-mat-card{
-  height: 20vh;
-  width: 20vh;
+mat-card {
+  padding: 0;
+  height: 260px;
+  width: 190px;
   margin: 0 0.5vw;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
-  img{
-    max-height: 50%;
-    max-width: 50%;
-    object-fit: fit;
+  align-items: flex-start;
+
+  .md-unstyled-image img {
+    max-width: 100%;
+    width: 250px;
+    height: auto !important;
+    border-radius: 1%;
   }
-  mat-card-content{
-    mat-card-subtitle{
-      margin-top: 1vh;
+
+  mat-card-content {
+    padding: 0 1.6vh 0.5vh 1.6vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    mat-card-subtitle {
       font: $text-font;
       font-weight: bold;
     }
-  }
-  mat-card-actions{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    a{
-      .fav{
-        color: $red-font;
+
+    mat-card-actions {
+      padding: 0 0.5vh;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      a{
+        .fav{
+          color: $red-font;
+        }
       }
     }
   }
 }
-

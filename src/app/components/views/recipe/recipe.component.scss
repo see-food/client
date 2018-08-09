@@ -7,7 +7,7 @@
   margin: 1vh auto;
 
   .recipe {
-    padding-top: 30px;
+    padding-top: 20px;
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -42,7 +42,7 @@
 
           a {
             padding: 0 8px;
-            
+
             .fav{
               color: $red-font;
             }
@@ -57,6 +57,13 @@
 
           div {
             padding: 0 8px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            i {
+              padding: 0 3px;
+            }
 
             h3 {
               font: $title-font;
@@ -92,31 +99,55 @@
       height: 60%;
       width: 100%;
       display: flex;
-      justify-content: flex-start;
-      align-items: baseline;
-      div{
-        h3{
+      flex-direction: row;
+      justify-content: center;
+
+      .ingredients {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+
+        h3 {
           font: $text-font;
           font-weight: bold;
           margin: 1vh 0;
         }
-        div{
-          h4{
+      }
+
+      .steps {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+
+        h3 {
+          font: $text-font;
+          font-weight: bold;
+          margin: 1vh 0;
+        }
+      }
+
+      .ingredients-container {
+        overflow: auto;
+        max-height: 100%;
+
+        div {
+          h4 {
             font: $text-font;
             margin: 1vh 0;
           }
         }
-      }
-      .ingredients-container {
-        overflow: auto;
-        width: 50%;
-        max-height: 100%;
 
       }
       .steps-container {
-        overflow: scroll;
-        width: 50%;
+        overflow: auto;
         max-height: 100%;
+
+        div {
+          h4 {
+            font: $text-font;
+            margin: 1vh 0;
+          }
+        }
       }
     }
   }

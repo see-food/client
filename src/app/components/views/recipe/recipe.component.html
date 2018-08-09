@@ -4,8 +4,11 @@
   </p>
   <div class="recipe" *ngIf="recipe">
     <div class="recipe-info">
-      <div class="recipe-photo">
+      <div *ngIf="recipe.images[0]" class="recipe-photo">
         <img src="{{recipe.images[0].replace('125x70', '300x200')}}" alt="photo-recipe">
+      </div>
+      <div *ngIf="!recipe.images[0]" class="recipe-photo">
+        <img src="http://via.placeholder.com/300x200" alt="photo-recipe">
       </div>
       <div class="recipe-text">
         <div class="recipe-name">
@@ -16,37 +19,44 @@
           <h1>{{recipe.name}}</h1>
         </div>
         <div class="recipe-properties">
-          <div>
+          <div *ngIf="recipe.time">
+            <i class="material-icons md-48">access_time</i>
             <h3>{{recipe.time}}</h3>
           </div>
-          <div>
+          <div *ngIf="recipe.servings">
+            <i class="material-icons md-48">room_service</i>
             <h3>{{recipe.servings}} servings</h3>
           </div>
-          <div>
+          <div *ngIf="recipe.calories">
+            <i class="material-icons md-48">bar_chart</i>
             <h3>{{recipe.calories}} calories</h3>
           </div>
         </div>
         <div class="recipe-pics">
-          <img src="{{recipe.images[1].replace('125x70', '100x80')}}" alt="photo-recipe" width="100px" height="80px">
-          <img src="{{recipe.images[2].replace('125x70', '100x80')}}" alt="photo-recipe" width="100px" height="80px">
-          <img src="{{recipe.images[3].replace('125x70', '100x80')}}" alt="photo-recipe" width="100px" height="80px">
-          <img src="{{recipe.images[4].replace('125x70', '100x80')}}" alt="photo-recipe" width="100px" height="80px">
-          <img src="{{recipe.images[5].replace('125x70', '100x80')}}" alt="photo-recipe" width="100px" height="80px">
+          <img *ngIf="recipe.images[1]" src="{{recipe.images[1].replace('125x70', '120x80')}}" alt="photo-recipe" width="120px" height="80px">
+          <img *ngIf="recipe.images[2]" src="{{recipe.images[2].replace('125x70', '120x80')}}" alt="photo-recipe" width="120px" height="80px">
+          <img *ngIf="recipe.images[3]" src="{{recipe.images[3].replace('125x70', '120x80')}}" alt="photo-recipe" width="120px" height="80px">
+          <img *ngIf="recipe.images[4]" src="{{recipe.images[4].replace('125x70', '120x80')}}" alt="photo-recipe" width="120px" height="80px">
+          <img *ngIf="recipe.images[5]" src="{{recipe.images[5].replace('125x70', '120x80')}}" alt="photo-recipe" width="120px" height="80px">
         </div>
       </div>
     </div>
     <div class="lists-container">
-      <div class="ingredients-container">
+      <div class="ingredients">
         <h3>Ingredients</h3>
-        <div *ngFor="let ingredient of recipe.ingredients">
-          <h4>- {{ingredient}}</h4>
+        <div class="ingredients-container">
+          <div *ngFor="let ingredient of recipe.ingredients">
+            <h4>- {{ingredient}}</h4>
+          </div>
         </div>
       </div>
-      <div class="steps-container">
-          <h3>Steps</h3>
-          <div *ngFor="let step of recipe.instructions, let i = index">
-            <h4>{{i + 1}} - {{step}}</h4>
-          </div>
+      <div class="steps">
+        <h3>Steps</h3>
+        <div class="steps-container">
+            <div *ngFor="let step of recipe.instructions, let i = index">
+              <h4>{{i + 1}} - {{step}}</h4>
+            </div>
+        </div>
       </div>
     </div>
   </div>
