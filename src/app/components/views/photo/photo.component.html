@@ -1,8 +1,18 @@
 <div class="container" *ngIf="photo">
   <div class="photo">
-    <div class="img-container">
-      <h3>This is your photo</h3>
-      <img src="{{photo.path}}" alt="photo">
+    <div class="photo-ingredients">
+      <div class="img-container">
+        <h3>This is your photo</h3>
+        <img src="{{photo.path}}" alt="photo">
+      </div>
+      <div class="info">
+        <h3>And this is what we found about it!</h3>
+        <mat-list>
+          <mat-list-item *ngFor="let ingredient of photo.clarifaiInfo">
+            <h4>{{ingredient.name}}</h4>
+          </mat-list-item>
+        </mat-list>
+      </div>
     </div>
     <h3>And we found this related recipes!</h3>
     <div class="recipes" *ngIf="photo.recipes.length">
