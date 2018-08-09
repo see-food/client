@@ -4,9 +4,8 @@
   </div>
   <div *ngIf="recipes">
     <div class="no-recipes" *ngIf="recipes.length < 1">
-      <h1>
-        You don't have saved recipes yet, take a photo and save some of them!
-      </h1>
+      <h1>You don't have saved recipes yet, take a photo and save some of them!</h1>
+      <a mat-flat-button color="warn" [routerLink]="['/newPhoto']">New Photo?</a>
     </div>
     <div *ngIf="recipes.length > 0">
       <h1>My favourite recipes!</h1>
