@@ -10,6 +10,7 @@
     </div>
   </div>
   <div id="my-recipes" class="my-recipes">
+    <a id="recipesMobile" mat-flat-button color="warn" [routerLink]="['/profile/recipes']">My recipes</a>
     <div *ngIf="!recipeArray">
       <div class="title">
         <h4>Loading your last recipes</h4>
@@ -35,6 +36,7 @@
   </div>
 
   <div id="my-photos" class="my-photos">
+    <a id="photosMobile" mat-flat-button color="warn" [routerLink]="['/profile/photos']">My photos</a>
     <div *ngIf="!photoArray">
       <div class="title">
         <h4>Loading your last photos</h4>

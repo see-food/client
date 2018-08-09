@@ -91,6 +91,14 @@
   }
 }
 
+#recipesMobile {
+  display: none;
+}
+
+#photosMobile {
+  display: none;
+}
+
 @media (max-width: 767px){
   .container{
     align-items: center;
@@ -109,5 +117,13 @@
         display: none;
       }
     }
+  }
+
+  #recipesMobile {
+    display: block;
+  }
+
+  #photosMobile {
+    display: block;
   }
 }
