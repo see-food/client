@@ -29,7 +29,7 @@ nav {
         color: $red-font;
         font-family: 'Catamaran', sans-serif;
         font-weight: bold;
-        font-size: 1rem;
+        font-size: 1.6em;
       }
     }
   }
@@ -59,9 +59,6 @@ nav {
 
 @media (max-width:767px) {
   nav {
-    .menu-container {
-      display: block;
-    }
     ul {
       display: none;
     }
