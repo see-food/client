@@ -16,13 +16,16 @@
           <h1>{{recipe.name}}</h1>
         </div>
         <div class="recipe-properties">
-          <div>
+          <div *ngIf="recipe.time">
+            <i class="material-icons md-48">access_time</i>
             <h3>{{recipe.time}}</h3>
           </div>
-          <div>
+          <div *ngIf="recipe.servings">
+            <i class="material-icons md-48">room_service</i>
             <h3>{{recipe.servings}} servings</h3>
           </div>
-          <div>
+          <div *ngIf="recipe.calories">
+            <i class="material-icons md-48">bar_chart</i>
             <h3>{{recipe.calories}} calories</h3>
           </div>
         </div>

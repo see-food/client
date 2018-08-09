@@ -42,7 +42,7 @@
 
           a {
             padding: 0 8px;
-            
+
             .fav{
               color: $red-font;
             }
@@ -57,6 +57,13 @@
 
           div {
             padding: 0 8px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            i {
+              padding: 0 3px;
+            }
 
             h3 {
               font: $title-font;
