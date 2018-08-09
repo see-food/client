@@ -39,18 +39,22 @@
       </div>
     </div>
     <div class="lists-container">
-      <div class="ingredients-container">
+      <div class="ingredients">
         <h3>Ingredients</h3>
-        <div *ngFor="let ingredient of recipe.ingredients">
-          <h4>- {{ingredient}}</h4>
+        <div class="ingredients-container">
+          <div *ngFor="let ingredient of recipe.ingredients">
+            <h4>- {{ingredient}}</h4>
+          </div>
         </div>
       </div>
-      <div class="steps-container">
-          <h3>Steps</h3>
-          <div *ngFor="let step of recipe.instructions, let i = index">
-            <h4>{{i + 1}} - {{step}}</h4>
-          </div>
-      </div>
+      <div class="steps">
+        <h3>Steps</h3>
+        <div class="steps-container">
+            <div *ngFor="let step of recipe.instructions, let i = index">
+              <h4>{{i + 1}} - {{step}}</h4>
+            </div>
+        </div>
+      </div>      
     </div>
   </div>
 </div>
