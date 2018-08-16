@@ -18,7 +18,7 @@ export const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'login',  component: LoginComponent },
   { path: 'signup',  component: SignupComponent },
-  { path: 'confirm/:id',  component: ConfirmComponent , canActivate: [SessionGuardService] },
+  { path: 'confirm/:id',  component: ConfirmComponent },
   { path: 'profile', component: ProfilePageComponent , canActivate: [SessionGuardService]},
   { path: 'newPhoto', component: PhotoUploadComponent , canActivate: [SessionGuardService]},
   { path: 'photo/wait/:id', component: PhotoExchangeComponent, canActivate: [SessionGuardService]},
